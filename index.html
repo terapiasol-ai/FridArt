@@ -9,16 +9,18 @@
     body { font-family: 'Georgia', serif; background: #0a0a0a; color: #e0d5c0; line-height: 1.7; }
     
     header { background: linear-gradient(135deg, #1a1200 0%, #0a0a0a 100%); padding: 50px 20px; text-align: center; border-bottom: 2px solid #c9a84c; }
+    .logo-hero { width: 180px; height: 180px; border-radius: 50%; border: 3px solid #c9a84c; box-shadow: 0 0 30px rgba(201,168,76,0.3); margin-bottom: 20px; object-fit: cover; }
     header h1 { color: #c9a84c; font-size: 2.8em; letter-spacing: 2px; margin-bottom: 8px; }
     header .subtitle { color: #a89060; font-size: 1.2em; font-style: italic; max-width: 700px; margin: 0 auto 15px; }
     header .role-desc { color: #c0b090; font-size: 1em; max-width: 800px; margin: 0 auto 25px; line-height: 1.5; }
     
-    .btn-gold { display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #c9a84c, #8b6914); color: #000; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1em; transition: all 0.3s; margin: 5px; }
+    .header-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+    .btn-gold { display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #c9a84c, #8b6914); color: #000; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1em; transition: all 0.3s; }
     .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
-    .btn-outline { display: inline-block; padding: 14px 35px; background: transparent; border: 2px solid #c9a84c; color: #c9a84c; text-decoration: none; border-radius: 30px; font-size: 1em; transition: all 0.3s; margin: 5px; }
+    .btn-outline { display: inline-block; padding: 14px 30px; background: transparent; border: 2px solid #c9a84c; color: #c9a84c; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1em; transition: all 0.3s; }
     .btn-outline:hover { background: #c9a84c; color: #000; }
     
-    .promo-banner { background: linear-gradient(135deg, #2a1f0a, #1a1200); border: 2px solid #c9a84c; border-radius: 12px; max-width: 800px; margin: 25px auto 0; padding: 15px 20px; text-align: center; box-shadow: 0 4px 15px rgba(201,168,76,0.3); }
+    .promo-banner { background: linear-gradient(135deg, #2a1f0a, #1a1200); border: 2px solid #c9a84c; border-radius: 12px; max-width: 800px; margin: 0 auto; padding: 15px 20px; text-align: center; box-shadow: 0 4px 15px rgba(201,168,76,0.3); }
     .promo-banner h3 { color: #c9a84c; font-size: 1.2em; margin-bottom: 5px; text-transform: uppercase; }
     .promo-banner p { color: #ffffff; font-weight: bold; font-size: 1.1em; }
 
@@ -77,19 +79,22 @@
 </head>
 <body>
 
-<section class="hero">
-    <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg" alt="fridArt" class="logo-hero">
+<header>
+    <img src="logo-frida.jpg" alt="FRIDA Galería de Arte Virtual" class="logo-hero" onError="this.onerror=null;this.src='https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg';">
     <h1>fridArt</h1>
     <p class="subtitulo">Galería de Arte Virtual & Marchante con Alma</p>
-    <p class="desc">Acuarelas originales pintadas a mano. Cada pieza es única e irrepetible. fridAi, nuestra asistente con alma humanizada, te acompaña en un recorrido íntimo por cada obra, como si caminaras junto a una curadora real.</p>
-    <a href="https://t.me/Solsanchez_bot?start=proy_frida" class="btn-gold" target="_blank">Iniciar Visita Guiada con fridAi</a>
-    <a href="#artistas" class="btn-outline">Soy Artista, quiero exponer</a>
+    <p class="role-desc">fridArt no es solo una galería: es una curadora virtual con alma. Muestra obras, relata la historia viva de cada pieza, guía visitas virtuales interactivas y conecta códigos QR físicos con narrativas artísticas para vender arte 24/7 sin descanso.</p>
+    
+    <div class="header-buttons">
+        <a href="https://t.me/Solsanchez_bot?start=proy_frida" class="btn-gold" target="_blank">Iniciar Visita Guiada con fridAi</a>
+        <a href="#artistas" class="btn-outline">Soy Artista, quiero exponer</a>
+    </div>
 
     <div class="promo-banner">
         <h3>✨ Oferta Especial de la Galería ✨</h3>
         <p>¡Lleva 2 obras de arte y obtén un 25% DE DESCUENTO en tu compra!</p>
     </div>
-</section>
+</header>
 
 <!-- GALERIA -->
 <section>
@@ -168,151 +173,27 @@
 </a>
 
 <script>
+const base = "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/";
+const wa = "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20";
+const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras";
+
 const obras = [
-  {
-    "id": "obra_01",
-    "titulo": "Cielo Nublado",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$120.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Cielo%20Nublado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Inmensidad del cielo cargado de nubes sobre la costa."
-  },
-  {
-    "id": "obra_02",
-    "titulo": "Desnudo con Brazos Arriba",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$150.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0023.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20con%20Brazos%20Arriba%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Silueta humana con brazos levantados."
-  },
-  {
-    "id": "obra_03",
-    "titulo": "Flores de Primavera",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$95.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0022.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flores%20de%20Primavera%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Acuarela alegre que retrata flores silvestres floreciendo."
-  },
-  {
-    "id": "obra_04",
-    "titulo": "Barco Azul",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$135.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0020.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Barco%20Azul%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Pesquero navegando en alta mar rodeado de gaviotas."
-  },
-  {
-    "id": "obra_05",
-    "titulo": "Muelle al Atardecer",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$110.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0024.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Muelle%20al%20Atardecer%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Reflejos del ocaso sobre el muelle."
-  },
-  {
-    "id": "obra_06",
-    "titulo": "Desnudo Fondo Morado",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$125.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0026.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Fondo%20Morado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Silueta humana con fondo en tonos morados."
-  },
-  {
-    "id": "obra_07",
-    "titulo": "Desnudo Torso Espaldas",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$130.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0029.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Torso%20Espaldas%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Estudio anatomico centrado en la espalda."
-  },
-  {
-    "id": "obra_08",
-    "titulo": "Desnudo Acostado",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$140.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0028(1).jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Acostado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Figura recostada con matices de acuarela."
-  },
-  {
-    "id": "obra_09",
-    "titulo": "Desnudo Monocromo de Pie",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$120.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0032.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Monocromo%20de%20Pie%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Silueta de pie en tonos grises y negros."
-  },
-  {
-    "id": "obra_10",
-    "titulo": "Flor Blanca Solitaria",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$90.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0041.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flor%20Blanca%20Solitaria%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Estudio de flor blanca sobre fondo oscuro."
-  },
-  {
-    "id": "obra_11",
-    "titulo": "Atardecer Rojo",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$125.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0039.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Atardecer%20Rojo%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Puesta de sol con intensos matices rojos."
-  },
-  {
-    "id": "obra_12",
-    "titulo": "Marina Gris",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$115.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0045.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Marina%20Gris%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Paisaje de mar bajo la bruma costera."
-  },
-  {
-    "id": "obra_13",
-    "titulo": "Nubes Azules",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$110.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0042.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Nubes%20Azules%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Estudio de nubes y texturas en tonos celestes."
-  },
-  {
-    "id": "obra_14",
-    "titulo": "Desnudo de Frente",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$135.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0037.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20de%20Frente%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Silueta humana sentada de frente."
-  },
-  {
-    "id": "obra_15",
-    "titulo": "Desnudo con Alas",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$140.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0038.jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20con%20Alas%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Figura artistica de espaldas con formas aladas."
-  },
-  {
-    "id": "obra_16",
-    "titulo": "Flor de Loto Rosada",
-    "tecnica": "Acuarela sobre papel 300g",
-    "precio": "$100.000 CLP",
-    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0044(1).jpg",
-    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flor%20de%20Loto%20Rosada%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
-    "historia": "Detalle expresivo de una flor rosada."
-  }
+  {"id":"obra_01","titulo":"Cielo Nublado","tecnica":"Acuarela sobre papel 300g","precio":"$120.000 CLP","imagen_url":base+"IMG-20260715-WA0021.jpg","pago_url":wa+"Cielo%20Nublado"+disc,"historia":"Inmensidad del cielo cargado de nubes sobre la costa."},
+  {"id":"obra_02","titulo":"Desnudo con Brazos Arriba","tecnica":"Acuarela sobre papel 300g","precio":"$150.000 CLP","imagen_url":base+"IMG-20260715-WA0023.jpg","pago_url":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"historia":"Silueta humana con brazos levantados."},
+  {"id":"obra_03","titulo":"Flores de Primavera","tecnica":"Acuarela sobre papel 300g","precio":"$95.000 CLP","imagen_url":base+"IMG-20260715-WA0022.jpg","pago_url":wa+"Flores%20de%20Primavera"+disc,"historia":"Acuarela alegre que retrata flores silvestres floreciendo."},
+  {"id":"obra_04","titulo":"Barco Azul","tecnica":"Acuarela sobre papel 300g","precio":"$135.000 CLP","imagen_url":base+"IMG-20260715-WA0020.jpg","pago_url":wa+"Barco%20Azul"+disc,"historia":"Pesquero navegando en alta mar rodeado de gaviotas."},
+  {"id":"obra_05","titulo":"Muelle al Atardecer","tecnica":"Acuarela sobre papel 300g","precio":"$110.000 CLP","imagen_url":base+"IMG-20260715-WA0024.jpg","pago_url":wa+"Muelle%20al%20Atardecer"+disc,"historia":"Reflejos del ocaso sobre el muelle."},
+  {"id":"obra_06","titulo":"Desnudo Fondo Morado","tecnica":"Acuarela sobre papel 300g","precio":"$125.000 CLP","imagen_url":base+"IMG-20260715-WA0026.jpg","pago_url":wa+"Desnudo%20Fondo%20Morado"+disc,"historia":"Silueta humana con fondo en tonos morados."},
+  {"id":"obra_07","titulo":"Desnudo Torso Espaldas","tecnica":"Acuarela sobre papel 300g","precio":"$130.000 CLP","imagen_url":base+"IMG-20260715-WA0029.jpg","pago_url":wa+"Desnudo%20Torso%20Espaldas"+disc,"historia":"Estudio anatomico centrado en la espalda."},
+  {"id":"obra_08","titulo":"Desnudo Acostado","tecnica":"Acuarela sobre papel 300g","precio":"$140.000 CLP","imagen_url":base+"IMG-20260715-WA0028(1).jpg","pago_url":wa+"Desnudo%20Acostado"+disc,"historia":"Figura recostada con matices de acuarela."},
+  {"id":"obra_09","titulo":"Desnudo Monocromo de Pie","tecnica":"Acuarela sobre papel 300g","precio":"$120.000 CLP","imagen_url":base+"IMG-20260715-WA0032.jpg","pago_url":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"historia":"Silueta de pie en tonos grises y negros."},
+  {"id":"obra_10","titulo":"Flor Blanca Solitaria","tecnica":"Acuarela sobre papel 300g","precio":"$90.000 CLP","imagen_url":base+"IMG-20260715-WA0041.jpg","pago_url":wa+"Flor%20Blanca%20Solitaria"+disc,"historia":"Estudio de flor blanca sobre fondo oscuro."},
+  {"id":"obra_11","titulo":"Atardecer Rojo","tecnica":"Acuarela sobre papel 300g","precio":"$125.000 CLP","imagen_url":base+"IMG-20260715-WA0039.jpg","pago_url":wa+"Atardecer%20Rojo"+disc,"historia":"Puesta de sol con intensos matices rojos."},
+  {"id":"obra_12","titulo":"Marina Gris","tecnica":"Acuarela sobre papel 300g","precio":"$115.000 CLP","imagen_url":base+"IMG-20260715-WA0045.jpg","pago_url":wa+"Marina%20Gris"+disc,"historia":"Paisaje de mar bajo la bruma costera."},
+  {"id":"obra_13","titulo":"Nubes Azules","tecnica":"Acuarela sobre papel 300g","precio":"$110.000 CLP","imagen_url":base+"IMG-20260715-WA0042.jpg","pago_url":wa+"Nubes%20Azules"+disc,"historia":"Estudio de nubes y texturas en tonos celestes."},
+  {"id":"obra_14","titulo":"Desnudo de Frente","tecnica":"Acuarela sobre papel 300g","precio":"$135.000 CLP","imagen_url":base+"IMG-20260715-WA0037.jpg","pago_url":wa+"Desnudo%20de%20Frente"+disc,"historia":"Silueta humana sentada de frente."},
+  {"id":"obra_15","titulo":"Desnudo con Alas","tecnica":"Acuarela sobre papel 300g","precio":"$140.000 CLP","imagen_url":base+"IMG-20260715-WA0038.jpg","pago_url":wa+"Desnudo%20con%20Alas"+disc,"historia":"Figura artistica de espaldas con formas aladas."},
+  {"id":"obra_16","titulo":"Flor de Loto Rosada","tecnica":"Acuarela sobre papel 300g","precio":"$100.000 CLP","imagen_url":base+"IMG-20260715-WA0044(1).jpg","pago_url":wa+"Flor%20de%20Loto%20Rosada"+disc,"historia":"Detalle expresivo de una flor rosada."}
 ];
 
 const container = document.getElementById('galeria-grid');
@@ -320,9 +201,22 @@ const container = document.getElementById('galeria-grid');
 obras.forEach(o => {
   const card = document.createElement('div');
   card.className = 'obra-card';
+  
+  const imgElement = document.createElement('img');
+  imgElement.src = o.imagen_url;
+  imgElement.alt = o.titulo;
+  imgElement.loading = 'lazy';
+  imgElement.onerror = function() {
+    if(this.src.includes('(1)')) {
+      this.src = this.src.replace('(1)', '');
+    } else {
+      this.src = 'https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg';
+    }
+  };
+
   card.innerHTML = `
     <span class="badge-discount">25% OFF al llevar 2</span>
-    <img src="${o.imagen_url}" alt="${o.titulo}" loading="lazy" />
+    <div style="width:100%;height:320px;overflow:hidden;background:#1a1a1a;" id="img-container-${o.id}"></div>
     <div class="obra-info">
       <h3>${o.titulo}</h3>
       <p class="tecnica">${o.tecnica}</p>
@@ -331,7 +225,9 @@ obras.forEach(o => {
       <a href="${o.pago_url}" target="_blank" class="btn-obra">Comprar por WhatsApp</a>
     </div>
   `;
+  
   container.appendChild(card);
+  document.getElementById(`img-container-${o.id}`).appendChild(imgElement);
 });
 </script>
 
