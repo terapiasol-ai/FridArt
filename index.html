@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fridArt - Galería de Arte Virtual | Acuarelas Originales</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; background: #faf8f5; color: #2c2c2c; line-height: 1.7; }
-        
-        .hero { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; background: linear-gradient(180deg, #f5f0ea 0%, #faf8f5 100%); }
-        .logo-hero { width: 220px; height: 220px; border-radius: 50%; border: 3px solid #8b7355; box-shadow: 0 10px 40px rgba(0,0,0,0.15); margin-bottom: 30px; object-fit: cover; }
-        .hero h1 { font-size: 2.8em; color: #4a3728; margin-bottom: 10px; letter-spacing: 2px; }
-        .hero .subtitulo { font-size: 1.2em; color: #8b7355; margin-bottom: 20px; }
-        .hero .desc { font-size: 1.05em; color: #5a4a3a; max-width: 650px; margin: 0 auto 30px; }
-        .btn-gold { display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #8b7355, #5a4030); color: #fff; text-decoration: none; border-radius: 30px; font-size: 1em; transition: all 0.3s; margin: 5px; }
-        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(90,64,48,0.3); }
-        .btn-outline { display: inline-block; padding: 14px 35px; background: transparent; border: 2px solid #8b7355; color: #8b7355; text-decoration: none; border-radius: 30px; font-size: 1em; transition: all 0.3s; margin: 5px; }
-        .btn-outline:hover { background: #8b7355; color: #fff; }
-        
-        .promo-banner { background: #f0ebe4; border: 2px solid #8b7355; border-radius: 12px; max-width: 700px; margin: 20px auto 0; padding: 15px 20px; text-align: center; }
-        .promo-banner h3 { color: #4a3728; font-size: 1.2em; margin-bottom: 5px; }
-        .promo-banner p { color: #8b7355; font-weight: bold; font-size: 1.05em; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fridArt - Galería de Arte Virtual | Acuarelas Originales</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background: #0a0a0a; color: #e0d5c0; line-height: 1.7; }
+    
+    header { background: linear-gradient(135deg, #1a1200 0%, #0a0a0a 100%); padding: 50px 20px; text-align: center; border-bottom: 2px solid #c9a84c; }
+    header h1 { color: #c9a84c; font-size: 2.8em; letter-spacing: 2px; margin-bottom: 8px; }
+    header .subtitle { color: #a89060; font-size: 1.2em; font-style: italic; max-width: 700px; margin: 0 auto 15px; }
+    header .role-desc { color: #c0b090; font-size: 1em; max-width: 800px; margin: 0 auto 25px; line-height: 1.5; }
+    
+    .btn-gold { display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #c9a84c, #8b6914); color: #000; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1em; transition: all 0.3s; margin: 5px; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
+    .btn-outline { display: inline-block; padding: 14px 35px; background: transparent; border: 2px solid #c9a84c; color: #c9a84c; text-decoration: none; border-radius: 30px; font-size: 1em; transition: all 0.3s; margin: 5px; }
+    .btn-outline:hover { background: #c9a84c; color: #000; }
+    
+    .promo-banner { background: linear-gradient(135deg, #2a1f0a, #1a1200); border: 2px solid #c9a84c; border-radius: 12px; max-width: 800px; margin: 25px auto 0; padding: 15px 20px; text-align: center; box-shadow: 0 4px 15px rgba(201,168,76,0.3); }
+    .promo-banner h3 { color: #c9a84c; font-size: 1.2em; margin-bottom: 5px; text-transform: uppercase; }
+    .promo-banner p { color: #ffffff; font-weight: bold; font-size: 1.1em; }
 
-        section { padding: 60px 20px; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .sec-titulo { text-align: center; font-size: 2em; color: #4a3728; margin-bottom: 15px; }
-        .sec-sub { text-align: center; font-size: 1.05em; color: #8b7355; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; }
-        
-        .galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .obra-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; position: relative; display: flex; flex-direction: column; }
-        .obra-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
-        .badge-discount { position: absolute; top: 12px; right: 12px; background: #8b7355; color: #fff; font-size: 0.75em; font-weight: bold; padding: 5px 12px; border-radius: 20px; z-index: 2; }
-        .obra-card img { width: 100%; height: 280px; object-fit: cover; }
-        .obra-info { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .obra-info h3 { color: #4a3728; margin-bottom: 8px; font-size: 1.2em; }
-        .obra-info .tecnica { color: #8b7355; font-size: 0.9em; margin-bottom: 8px; }
-        .obra-info .historia { color: #5a4a3a; font-size: 0.9em; margin-bottom: 12px; flex: 1; }
-        .obra-info .precio { color: #4a3728; font-weight: bold; font-size: 1.1em; margin-bottom: 10px; }
-        .btn-obra { display: inline-block; padding: 10px 20px; background: #8b7355; color: #fff; text-decoration: none; border-radius: 20px; font-size: 0.9em; text-align: center; transition: all 0.3s; }
-        .btn-obra:hover { background: #5a4030; }
-        
-        .visita { background: #f0ebe4; text-align: center; }
-        .visita p { max-width: 650px; margin: 0 auto 25px; color: #5a4a3a; font-size: 1.05em; }
-        
-        .artistas { background: #faf8f5; border-top: 1px solid #e8e0d8; }
-        .artistas-contenido { max-width: 700px; margin: 0 auto; }
-        .artistas-contenido p { color: #5a4a3a; margin-bottom: 15px; font-size: 1em; }
-        .plan-card { background: #fff; border: 2px solid #8b7355; border-radius: 16px; padding: 30px; text-align: center; margin: 30px auto; max-width: 450px; }
-        .plan-card h3 { color: #4a3728; font-size: 1.4em; margin-bottom: 10px; }
-        .plan-card .precio-plan { font-size: 1.8em; color: #8b7355; font-weight: bold; margin-bottom: 10px; }
-        .plan-card .periodo { color: #908070; font-size: 0.9em; margin-bottom: 15px; }
-        .plan-card ul { list-style: none; text-align: left; padding: 0; }
-        .plan-card ul li { padding: 8px 0; border-bottom: 1px solid #f0ebe4; color: #5a4a3a; font-size: 0.95em; }
-        .plan-card ul li::before { content: "✓ "; color: #8b7355; font-weight: bold; }
-        
-        .contacto { background: #4a3728; color: #e0d5c0; text-align: center; }
-        .contacto h2 { color: #d4b896; margin-bottom: 15px; }
-        .contacto p { margin-bottom: 20px; }
-        
-        .datos-pago { background: #fff; border-radius: 12px; padding: 25px; max-width: 450px; margin: 25px auto 0; text-align: left; color: #4a3728; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .datos-pago h4 { margin-bottom: 12px; color: #8b7355; font-size: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .datos-pago p { font-size: 0.95em; margin-bottom: 8px; }
-        
-        footer { background: #2c1810; padding: 30px; text-align: center; color: #8b7355; font-size: 0.9em; }
-        footer a { color: #d4b896; text-decoration: none; }
+    section { padding: 60px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sec-titulo { text-align: center; font-size: 2em; color: #c9a84c; margin-bottom: 15px; }
+    .sec-sub { text-align: center; font-size: 1.05em; color: #a89060; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; }
+    
+    .galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .obra-card { background: #141414; border: 1px solid #2a2010; border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; position: relative; }
+    .obra-card:hover { transform: translateY(-5px); border-color: #c9a84c; box-shadow: 0 10px 25px rgba(201,168,76,0.2); }
+    .badge-discount { position: absolute; top: 12px; right: 12px; background: #c9a84c; color: #000; font-size: 0.75em; font-weight: bold; padding: 5px 12px; border-radius: 20px; z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+    .obra-card img { width: 100%; height: 320px; object-fit: cover; }
+    .obra-info { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .obra-info h3 { color: #c9a84c; margin-bottom: 8px; font-size: 1.3em; }
+    .obra-info .tecnica { color: #706050; font-size: 0.85em; font-style: italic; margin-bottom: 8px; }
+    .obra-info .historia { color: #a09080; font-size: 0.95em; margin-bottom: 15px; flex: 1; }
+    .obra-info .precio { color: #e0d5c0; font-weight: bold; font-size: 1.2em; margin-bottom: 12px; }
+    .btn-obra { display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; text-decoration: none; border-radius: 25px; font-size: 0.9em; font-weight: bold; text-align: center; transition: all 0.3s; }
+    .btn-obra:hover { background: #20ba5a; transform: scale(1.03); }
+    
+    .visita { background: #141414; border-top: 1px solid #2a2010; border-bottom: 1px solid #2a2010; text-align: center; }
+    .visita p { max-width: 700px; margin: 0 auto 25px; color: #b0a090; font-size: 1.05em; }
+    
+    .artistas { background: #0a0a0a; }
+    .artistas-contenido { max-width: 750px; margin: 0 auto; }
+    .artistas-contenido p { color: #a09080; margin-bottom: 15px; font-size: 1em; text-align: center; }
+    .plan-card { background: linear-gradient(145deg, #181308, #0e0a03); border: 2px solid #c9a84c; border-radius: 20px; padding: 35px 25px; text-align: center; margin: 30px auto; max-width: 500px; box-shadow: 0 10px 30px rgba(201,168,76,0.15); }
+    .plan-card h3 { color: #c9a84c; font-size: 1.8em; margin-bottom: 10px; }
+    .plan-card .precio-plan { font-size: 2.2em; color: #fff; font-weight: bold; margin-bottom: 5px; }
+    .plan-card .periodo { color: #a89060; font-style: italic; font-size: 0.95em; margin-bottom: 20px; }
+    .plan-card ul { list-style: none; text-align: left; padding: 0; max-width: 400px; margin: 0 auto 25px; }
+    .plan-card ul li { padding: 8px 0; border-bottom: 1px solid #221a10; color: #d0c0b0; font-size: 0.95em; }
+    .plan-card ul li::before { content: "✓ "; color: #c9a84c; font-weight: bold; margin-right: 6px; }
+    
+    .contacto { background: linear-gradient(135deg, #1a1200, #0a0a0a); color: #e0d5c0; text-align: center; border-top: 1px solid #2a2010; }
+    .contacto h2 { color: #c9a84c; margin-bottom: 15px; font-size: 2em; }
+    .contacto p { color: #a09080; margin-bottom: 25px; }
+    
+    .datos-pago { background: #141414; border: 1px solid #3a2a10; border-radius: 16px; padding: 30px; max-width: 480px; margin: 30px auto 0; text-align: left; color: #e0d5c0; box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+    .datos-pago h4 { margin-bottom: 15px; color: #c9a84c; font-size: 1.3em; border-bottom: 1px solid #2a2010; padding-bottom: 8px; }
+    .datos-pago p { font-size: 1em; margin-bottom: 10px; color: #d0c0b0; }
+    .datos-pago strong { color: #c9a84c; }
+    
+    footer { background: #050505; padding: 30px; text-align: center; color: #605040; font-size: 0.9em; border-top: 1px solid #1a1a1a; margin-top: 40px; }
+    footer a { color: #c9a84c; text-decoration: none; }
 
-        .btn-whatsapp-flotante {
-            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
-            background-color: #25d366; color: white; border-radius: 50px;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.4); z-index: 99999; text-decoration: none;
-        }
-        .btn-whatsapp-flotante:hover { transform: scale(1.1); }
-        
-        @media (max-width: 768px) { .hero h1 { font-size: 2em; } .logo-hero { width: 160px; height: 160px; } }
-    </style>
+    .btn-whatsapp-flotante {
+      position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+      background-color: #25d366; color: white; border-radius: 50px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.5); z-index: 99999; text-decoration: none;
+    }
+    .btn-whatsapp-flotante:hover { transform: scale(1.1); }
+  </style>
 </head>
 <body>
 
@@ -96,16 +95,18 @@
 <section>
     <div class="container">
         <h2 class="sec-titulo">Colección Actual: Acuarelas de Enrique</h2>
-        <p class="sec-sub">Acuarelas originales del artista Erazo. Toca "Consultar" para hablar directamente con el artista por WhatsApp.</p>
+        <p class="sec-sub">Acuarelas originales del artista Erazo. Toca "Comprar por WhatsApp" para hablar directamente con el artista.</p>
         <div class="galeria-grid" id="galeria-grid"></div>
     </div>
 </section>
 
 <!-- VISITA GUIADA -->
 <section class="visita">
-    <h2 class="sec-titulo">Visita Guiada con fridAi</h2>
-    <p>fridAi no es un robot frío. Es una asistente con alma humanizada que te acompaña obra por obra como una verdadera curadora de galería. Te hace ver la sutileza del color, la luz que entra por los bordes, la emoción detrás de cada pincelada. Como hablar con una persona real que ama el arte.</p>
-    <a href="https://t.me/Solsanchez_bot?start=proy_frida" class="btn-gold" target="_blank">Iniciar Visita Guiada</a>
+    <div class="container">
+        <h2 class="sec-titulo">Visita Guiada con fridAi</h2>
+        <p>fridAi no es un robot frío. Es una asistente con alma humanizada que te acompaña obra por obra como una verdadera curadora de galería. Te hace ver la sutileza del color, la luz que entra por los bordes y la emoción detrás de cada pincelada.</p>
+        <a href="https://t.me/Solsanchez_bot?start=proy_frida" class="btn-gold" target="_blank">Iniciar Visita Guiada</a>
+    </div>
 </section>
 
 <!-- SECCION ARTISTAS -->
@@ -115,7 +116,7 @@
         <p class="sec-sub">Si eres artista y no sabes cómo venderte, fridArt es tu galería virtual con una marchante que trabaja 24/7 por ti.</p>
         
         <div class="artistas-contenido">
-            <p>Sabemos que muchos artistas tienen un talento extraordinario pero les cuesta venderse. fridArt resuelve eso: nuestra asistente fridAi presenta tus obras con pasión, cuenta la historia de cada pieza, sensibiliza al espectador y lo guía hasta la compra. Tú solo pintas, fridAi vende.</p>
+            <p>Sabemos que muchos artistas tienen un talento extraordinario pero les cuesta venderse. fridArt resuelve eso: nuestra asistente fridAi presenta tus obras con pasión, cuenta la historia de cada pieza y guía al espectador hasta la compra. Tú solo pintas, fridAi vende.</p>
             
             <div class="plan-card">
                 <h3>Plan Artista fridArt</h3>
@@ -130,7 +131,7 @@
                     <li>Notificación inmediata cuando alguien se interesa</li>
                     <li>Tu perfil de artista en la página web</li>
                 </ul>
-                <a href="https://wa.me/56927541231?text=Hola%20Sol%2C%20soy%20artista%20y%20quiero%20exponer%20en%20fridArt" class="btn-gold" style="margin-top: 20px;" target="_blank">Quiero Exponer</a>
+                <a href="https://wa.me/56927541231?text=Hola%20Sol%2C%20soy%20artista%20y%20quiero%20exponer%20en%20fridArt" class="btn-gold" style="margin-top: 15px;" target="_blank">Quiero Exponer</a>
             </div>
         </div>
     </div>
@@ -138,17 +139,19 @@
 
 <!-- CONTACTO Y DATOS DE PAGO -->
 <section class="contacto">
-    <h2>Adquiere una Obra Original</h2>
-    <p>Cada acuarela es única, pintada a mano. Envíos a todo Chile.</p>
-    <a href="https://wa.me/56997292389?text=Hola%20Enrique%2C%20quiero%20informacion%20sobre%20las%20acuarelas" class="btn-gold" target="_blank">Contactar al Artista</a>
-    
-    <div class="datos-pago">
-        <h4>Datos para Transferencia</h4>
-        <p><strong>Nombre:</strong> Enrique Erazo</p>
-        <p><strong>RUT:</strong> 13.920.983-4</p>
-        <p><strong>Banco:</strong> Banco de Chile</p>
-        <p><strong>Cuenta Vista:</strong> 00-012-40202-90</p>
-        <p><strong>WhatsApp:</strong> +56 9 9729 2389</p>
+    <div class="container">
+        <h2>Adquiere una Obra Original</h2>
+        <p>Cada acuarela es única, pintada a mano. Envíos a todo Chile.</p>
+        <a href="https://wa.me/56997292389?text=Hola%20Enrique%2C%20quiero%20informacion%20sobre%20las%20acuarelas" class="btn-gold" target="_blank">Contactar al Artista</a>
+        
+        <div class="datos-pago">
+            <h4>Datos para Transferencia Bancaria</h4>
+            <p><strong>Nombre:</strong> Enrique Erazo</p>
+            <p><strong>RUT:</strong> 13.920.983-4</p>
+            <p><strong>Banco:</strong> Banco de Chile</p>
+            <p><strong>Cuenta Vista:</strong> 00-012-40202-90</p>
+            <p><strong>WhatsApp Artista:</strong> +56 9 9729 2389</p>
+        </div>
     </div>
 </section>
 
@@ -165,27 +168,151 @@
 </a>
 
 <script>
-const base = "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/";
-const wa = "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20";
-const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras";
-
 const obras = [
-  {"t":"Cielo Nublado","p":"$120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa."},
-  {"t":"Desnudo con Brazos Arriba","p":"$150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados."},
-  {"t":"Flores de Primavera","p":"$95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela alegre que retrata flores silvestres floreciendo."},
-  {"t":"Barco Azul","p":"$135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero navegando en alta mar rodeado de gaviotas."},
-  {"t":"Muelle al Atardecer","p":"$110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos del ocaso sobre el muelle."},
-  {"t":"Desnudo Fondo Morado","p":"$125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Silueta humana con fondo en tonos morados."},
-  {"t":"Desnudo Torso Espaldas","p":"$130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatomico centrado en la espalda."},
-  {"t":"Desnudo Acostado","p":"$140.000 CLP","i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura recostada con matices de acuarela."},
-  {"t":"Desnudo Monocromo de Pie","p":"$120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Silueta de pie en tonos grises y negros."},
-  {"t":"Flor Blanca Solitaria","p":"$90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio de flor blanca sobre fondo oscuro."},
-  {"t":"Atardecer Rojo","p":"$125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices rojos."},
-  {"t":"Marina Gris","p":"$115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje de mar bajo la bruma costera."},
-  {"t":"Nubes Azules","p":"$110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de nubes y texturas en tonos celestes."},
-  {"t":"Desnudo de Frente","p":"$135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente."},
-  {"t":"Desnudo con Alas","p":"$140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Figura artistica de espaldas con formas aladas."},
-  {"t":"Flor de Loto Rosada","p":"$100.000 CLP","i":base+"IMG-20260715-WA0044(1).jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor rosada."}
+  {
+    "id": "obra_01",
+    "titulo": "Cielo Nublado",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$120.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Cielo%20Nublado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Inmensidad del cielo cargado de nubes sobre la costa."
+  },
+  {
+    "id": "obra_02",
+    "titulo": "Desnudo con Brazos Arriba",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$150.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0023.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20con%20Brazos%20Arriba%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Silueta humana con brazos levantados."
+  },
+  {
+    "id": "obra_03",
+    "titulo": "Flores de Primavera",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$95.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0022.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flores%20de%20Primavera%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Acuarela alegre que retrata flores silvestres floreciendo."
+  },
+  {
+    "id": "obra_04",
+    "titulo": "Barco Azul",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$135.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0020.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Barco%20Azul%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Pesquero navegando en alta mar rodeado de gaviotas."
+  },
+  {
+    "id": "obra_05",
+    "titulo": "Muelle al Atardecer",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$110.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0024.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Muelle%20al%20Atardecer%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Reflejos del ocaso sobre el muelle."
+  },
+  {
+    "id": "obra_06",
+    "titulo": "Desnudo Fondo Morado",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$125.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0026.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Fondo%20Morado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Silueta humana con fondo en tonos morados."
+  },
+  {
+    "id": "obra_07",
+    "titulo": "Desnudo Torso Espaldas",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$130.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0029.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Torso%20Espaldas%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Estudio anatomico centrado en la espalda."
+  },
+  {
+    "id": "obra_08",
+    "titulo": "Desnudo Acostado",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$140.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0028(1).jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Acostado%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Figura recostada con matices de acuarela."
+  },
+  {
+    "id": "obra_09",
+    "titulo": "Desnudo Monocromo de Pie",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$120.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0032.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20Monocromo%20de%20Pie%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Silueta de pie en tonos grises y negros."
+  },
+  {
+    "id": "obra_10",
+    "titulo": "Flor Blanca Solitaria",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$90.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0041.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flor%20Blanca%20Solitaria%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Estudio de flor blanca sobre fondo oscuro."
+  },
+  {
+    "id": "obra_11",
+    "titulo": "Atardecer Rojo",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$125.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0039.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Atardecer%20Rojo%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Puesta de sol con intensos matices rojos."
+  },
+  {
+    "id": "obra_12",
+    "titulo": "Marina Gris",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$115.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0045.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Marina%20Gris%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Paisaje de mar bajo la bruma costera."
+  },
+  {
+    "id": "obra_13",
+    "titulo": "Nubes Azules",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$110.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0042.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Nubes%20Azules%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Estudio de nubes y texturas en tonos celestes."
+  },
+  {
+    "id": "obra_14",
+    "titulo": "Desnudo de Frente",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$135.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0037.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20de%20Frente%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Silueta humana sentada de frente."
+  },
+  {
+    "id": "obra_15",
+    "titulo": "Desnudo con Alas",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$140.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0038.jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Desnudo%20con%20Alas%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Figura artistica de espaldas con formas aladas."
+  },
+  {
+    "id": "obra_16",
+    "titulo": "Flor de Loto Rosada",
+    "tecnica": "Acuarela sobre papel 300g",
+    "precio": "$100.000 CLP",
+    "imagen_url": "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0044(1).jpg",
+    "pago_url": "https://wa.me/56997292389?text=Hola%20Enrique%21%20Quiero%20comprar%20la%20acuarela%20Flor%20de%20Loto%20Rosada%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras",
+    "historia": "Detalle expresivo de una flor rosada."
+  }
 ];
 
 const container = document.getElementById('galeria-grid');
@@ -195,13 +322,13 @@ obras.forEach(o => {
   card.className = 'obra-card';
   card.innerHTML = `
     <span class="badge-discount">25% OFF al llevar 2</span>
-    <img src="${o.i}" alt="${o.t}" loading="lazy" />
+    <img src="${o.imagen_url}" alt="${o.titulo}" loading="lazy" />
     <div class="obra-info">
-      <h3>${o.t}</h3>
-      <p class="tecnica">Acuarela sobre papel 300g</p>
-      <p class="historia">${o.h}</p>
-      <p class="precio">${o.p}</p>
-      <a href="${o.w}" target="_blank" class="btn-obra">Consultar</a>
+      <h3>${o.titulo}</h3>
+      <p class="tecnica">${o.tecnica}</p>
+      <p class="historia">${o.historia}</p>
+      <p class="precio">${o.precio}</p>
+      <a href="${o.pago_url}" target="_blank" class="btn-obra">Comprar por WhatsApp</a>
     </div>
   `;
   container.appendChild(card);
