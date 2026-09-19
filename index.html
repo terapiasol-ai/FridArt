@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fridArte | Galería de Arte Virtual 3D & Marchante con Alma</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>fridArte | Galería de Arte 3D, Acuarelas & Poemario Vivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -15,6 +15,7 @@
       --text-light: #E8E0D0;
       --text-muted: #9E927E;
       --accent-green: #25D366;
+      --accent-purple: #A78BFA;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,7 +45,7 @@
 
     header h1 { color: var(--gold-light); font-size: 2.8rem; margin-bottom: 6px; }
     .subtitle { color: var(--gold); font-size: 1.15rem; font-style: italic; font-family: 'Cormorant Garamond', serif; margin-bottom: 12px; }
-    .role-desc { color: #CBD5E1; font-size: 0.95rem; max-width: 820px; margin: 0 auto 22px; line-height: 1.55; }
+    .role-desc { color: #CBD5E1; font-size: 0.95rem; max-width: 840px; margin: 0 auto 22px; line-height: 1.55; }
 
     .header-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
     .btn-gold { padding: 12px 26px; background: linear-gradient(135deg, var(--gold), #997A15); color: #0A0E14 !important; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 0.9rem; border: none; cursor: pointer; transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
@@ -66,7 +67,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 35px 15px; }
 
     /* ============================================================== */
-    /* 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D (EXPERIENCIA INMERSIVA) */
+    /* 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D (ACUARELAS) */
     /* ============================================================== */
     .room-3d-wrapper {
       background: radial-gradient(circle at center, #1C1810 0%, #08080C 100%);
@@ -83,7 +84,6 @@
     .room-header h2 { color: var(--gold-light); font-size: 2rem; }
     .room-header p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* ESCENARIO Y MARCO 3D */
     .stage-3d {
       perspective: 1200px;
       max-width: 650px;
@@ -192,8 +192,92 @@
     .curator-text { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #E8E0D0; font-style: italic; line-height: 1.5; }
 
     /* ============================================================== */
-    /* 🖼️ VITRINA Y CATÁLOGO DE OBRAS (GRILLA) */
+    /* 📜 SALÓN DE LITERATURA & POEMARIO VIVO (ENRIQUE ERAZO) */
     /* ============================================================== */
+    .poetry-salon {
+      background: radial-gradient(circle at center, #18121E 0%, #08070A 100%);
+      border: 2px solid var(--accent-purple);
+      border-radius: 20px;
+      padding: 35px 20px;
+      margin: 50px 0;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.85);
+    }
+
+    .poetry-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .poetry-menu {
+      background: #120C17;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      border-radius: 14px;
+      padding: 15px;
+      max-height: 480px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .poetry-item-btn {
+      background: #1B1224;
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      color: #E2E8F0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .poetry-item-btn:hover, .poetry-item-btn.active {
+      background: linear-gradient(135deg, #7C3AED, #4C1D95);
+      color: #FFF !important;
+      border-color: #C4B5FD;
+      transform: translateX(4px);
+    }
+
+    .poetry-display {
+      background: #0E0A12;
+      border: 1.5px solid var(--gold);
+      border-radius: 14px;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .poetry-title {
+      color: var(--gold-light);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+      padding-bottom: 8px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+    }
+
+    .poetry-verses {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #F1E7DB;
+      font-style: italic;
+      white-space: pre-line;
+      margin-bottom: 25px;
+      min-height: 240px;
+    }
+
+    /* GRILLA DE CUADROS */
     .sec-titulo { text-align: center; font-size: 2.2rem; color: var(--gold-light); margin-bottom: 6px; }
     .sec-sub { text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 0.95rem; }
 
@@ -306,17 +390,17 @@
     }
     .datos-pago {
       background: #14110B;
-      border: 1px solid var(--gold);
-      border-radius: 12px;
-      padding: 20px;
-      max-width: 440px;
+      border: 1.5px solid var(--gold);
+      border-radius: 14px;
+      padding: 22px;
+      max-width: 450px;
       margin: 20px auto 0;
       text-align: left;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      box-shadow: 0 0 25px rgba(212,175,55,0.15);
     }
-    .datos-pago h4 { color: var(--gold-light); border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 5px; margin-bottom: 8px; }
+    .datos-pago h4 { color: var(--gold-light); border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 6px; margin-bottom: 10px; font-size: 1.1rem; }
 
-    /* FOOTER & CONTADOR */
     footer {
       background: #050507;
       padding: 35px 15px 25px;
@@ -327,39 +411,162 @@
     }
     footer a { color: var(--gold-light); text-decoration: none; }
 
-    .btn-whatsapp-flotante {
-      position: fixed;
-      width: 55px;
-      height: 55px;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #FFF;
+    /* WIDGET INTERACTIVO DE ATENEA */
+    #atenea-widget-container { position: fixed; bottom: 20px; right: 15px; z-index: 9999999; }
+    
+    .atenea-bubble-btn {
+      background: rgba(18, 14, 8, 0.95);
+      border: 2px solid var(--gold);
+      border-radius: 50px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+    }
+    .atenea-avatar-pulse {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
+      border: 2px solid var(--gold);
+      overflow: hidden;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .atenea-avatar-pulse img { width: 100%; height: 100%; object-fit: cover; }
+    .atenea-bubble-title { color: var(--gold-light); font-size: 13px; font-weight: 700; font-family: 'Cinzel', serif; }
+    .atenea-bubble-sub { color: var(--accent-green); font-size: 11px; font-weight: 600; }
+
+    #atenea-chat-window {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 10px;
+      left: 10px;
+      max-width: 380px;
+      margin: 0 auto;
+      height: 500px;
+      background: #110E0A;
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.85);
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 9999999;
+    }
+
+    .atenea-chat-header {
+      background: #1A140B;
+      border-bottom: 1.5px solid var(--gold);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .atenea-chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.92rem;
+      background: #0D0A06;
+    }
+
+    .msg-atenea {
+      background: #17120B;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: #E8E0D0;
+      padding: 12px 14px;
+      border-radius: 14px 14px 14px 2px;
+      max-width: 90%;
+      line-height: 1.45;
+      align-self: flex-start;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+    }
+    .msg-user-art {
+      background: linear-gradient(135deg, var(--gold), #8B6914);
+      color: #0A0E14;
+      padding: 10px 14px;
+      border-radius: 14px 14px 2px 14px;
+      max-width: 85%;
+      font-weight: 600;
+      line-height: 1.4;
+      align-self: flex-end;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .atenea-input-box {
+      padding: 10px;
+      background: #140F08;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .atenea-mic-btn {
+      background: var(--gold);
+      border: none;
+      color: #0A0E14;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      font-size: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      z-index: 99999;
-      font-size: 26px;
-      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .atenea-mic-btn.recording { background: #E53E3E; color: white; animation: pulse 1s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+
+    .atenea-input-box input {
+      flex: 1;
+      background: #1D160C;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 20px;
+      padding: 9px 14px;
+      color: #FFF;
+      font-size: 0.9rem;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .atenea-send-btn {
+      background: var(--gold);
+      border: none;
+      color: #0A0E14;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- CABECERA DE LA GALERÍA -->
+  <!-- CABECERA -->
   <header>
     <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Logo fridArte" class="logo-hero">
     <h1>fridArte</h1>
-    <p class="subtitle">Galería de Arte Virtual 3D & Marchante con Alma</p>
+    <p class="subtitle">Galería de Arte Virtual 3D & Ateneo de Poesía Viva</p>
     <p class="role-desc">
-      Una vitrina soberana donde cada obra es presentada por <strong>Atenea</strong>, nuestra Curadora y Marchante de Arte con Inteligencia Artificial. Relatamos la emoción, la luz y la historia de las acuarelas originales del artista <strong>Enrique Erazo</strong> para dignificar el arte y conectarlo con el alma del coleccionista.
+      Una vitrina soberana donde el arte visual y la literatura se encuentran. Las acuarelas originales y el poemario de <strong>Enrique Ángel Erazo</strong> son presentados por <strong>Atenea</strong>, nuestra Curadora y Marchante con Inteligencia Artificial.
     </p>
 
     <div class="header-buttons">
-      <a href="#sala-3d" class="btn-gold">🏛️ Entrar a la Sala de Exhibición 3D</a>
-      <a href="https://terapiasol-ai.github.io/Aurion/" class="btn-outline">🌟 Ir al Portal Matriz AURION</a>
+      <a href="#sala-3d" class="btn-gold">🏛️ Sala 3D de Acuarelas</a>
+      <a href="#poesia" class="btn-gold" style="background:linear-gradient(135deg,#7C3AED,#4C1D95); color:#FFF !important;">📜 Salón de Poesía Viva</a>
+      <a href="https://terapiasol-ai.github.io/Aurion/" class="btn-outline">🌟 Portal Matriz AURION</a>
     </div>
 
     <div class="promo-banner">
@@ -371,7 +578,7 @@
   <div class="container">
 
     <!-- ============================================================== -->
-    <!-- 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D CON VOZ DE LA CURADORA ATENEA -->
+    <!-- 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D (ACUARELAS) -->
     <!-- ============================================================== -->
     <section class="room-3d-wrapper" id="sala-3d">
       <div class="room-header">
@@ -407,7 +614,7 @@
             "Inmensidad del cielo cargado de nubes sobre la costa. Fíjate en la sutileza de los tonos grises y la transparencia del agua que baña el papel de 300 gramos..."
           </p>
           <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div id="current-art-price" style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">$85.000 CLP (Antes $120.000 CLP)</div>
+            <div id="current-art-price" style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">85.000 pesos chilenos (Antes 120.000)</div>
             <a id="current-art-wa" href="https://wa.me/56997292389?text=Hola%20Enrique,%20me%20interesa%20la%20acuarela%20Cielo%20Nublado" target="_blank" class="btn-gold" style="padding:7px 16px; font-size:0.8rem;">
               <i class="fa-brands fa-whatsapp"></i> Adquirir esta Obra
             </a>
@@ -417,27 +624,70 @@
     </section>
 
     <!-- ============================================================== -->
-    <!-- 🖼️ CATÁLOGO COMPLETO DE ACUARELAS DE ENRIQUE ERAZO -->
+    <!-- 📜 SALÓN DE LITERATURA & POESÍA VIVA: ENRIQUE ÁNGEL ERAZO -->
+    <!-- ============================================================== -->
+    <section class="poetry-salon" id="poesia">
+      <div style="text-align:center; margin-bottom:20px;">
+        <i class="fa-solid fa-feather-pointed text-violet-400" style="font-size:2.5rem; color:#A78BFA; margin-bottom:8px;"></i>
+        <h2 style="color:#F6E7B0; font-size:2.2rem; font-family:'Cinzel', serif;">Salón de Poesía & Letras Vivas</h2>
+        <p style="color:#C4B5FD; font-size:1rem; font-style:italic;">Poemario Original de Enrique Ángel Erazo • Declamado por Atenea</p>
+      </div>
+
+      <div class="poetry-layout">
+        <!-- MENÚ DE POEMAS -->
+        <div class="poetry-menu" id="poetryMenu">
+          <!-- Se llena dinámicamente con JS -->
+        </div>
+
+        <!-- VISOR DEL POEMA SELECCIONADO -->
+        <div class="poetry-display">
+          <div>
+            <h3 class="poetry-title" id="poemTitle">Retrato en el espejo</h3>
+            <div class="poetry-verses" id="poemVerses">
+Miro el espejo y no estoy
+Veo al que fue
+ojo de cara desnuda en otro
+rostro cómplice fruncido de extrañeza
+Ojos arrojados al abismo de memorias
+imposibles de alcanzar
+Tiempo del cara a cara.
+            </div>
+          </div>
+
+          <div style="border-top:1px solid rgba(212,175,55,0.25); padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <button onclick="declamarPoemaActual()" class="btn-gold" style="background:linear-gradient(135deg,#7C3AED,#4C1D95); color:#FFF !important;">
+              <i class="fa-solid fa-volume-high"></i> 🎙️ Escuchar Poema Declamado
+            </button>
+            <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20adquirir%20tu%20Poemario%20Digital%20de%20Colecci%C3%B3n" target="_blank" class="btn-gold">
+              📖 Adquirir Poemario Digital (15.000 CLP)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 🖼️ CATÁLOGO COMPLETO DE ACUARELAS -->
     <!-- ============================================================== -->
     <h2 class="sec-titulo">Colección de Acuarelas Originales</h2>
     <p class="sec-sub">Obras únicas pintadas a mano sobre papel de algodón 300g por el artista y especialista Enrique Erazo.</p>
 
     <div class="galeria-grid" id="galeria-grid"></div>
 
-    <!-- SECCIÓN PARA ARTISTAS -->
+    <!-- SECCIÓN ARTISTAS -->
     <section class="artistas-section" id="artistas">
       <h2 class="sec-titulo">¿Eres Artista? Expón tu Obra en fridArte</h2>
       <p style="color:#CBD5E1; max-width:700px; margin:0 auto; font-size:0.95rem;">
-        Si eres pintor, escultor o creador visual y te cuesta comercializar tu arte, fridArte es tu galería virtual con una marchante con IA que presenta y vende tus obras 24/7 ante el mundo.
+        Si eres pintor, poeta o escultor y te cuesta comercializar tu arte, fridArte es tu galería virtual multidisciplinaria con una marchante con IA que presenta y vende tus obras 24/7 ante el mundo.
       </p>
 
       <div class="plan-card">
         <h3 class="cinzel" style="color:var(--gold-light); font-size:1.4rem;">Plan Artista fridArte</h3>
-        <div class="plan-price">$45.000 CLP</div>
+        <div class="plan-price">45.000 CLP</div>
         <div style="color:var(--gold); font-size:0.85rem; margin-bottom:12px;">Mensualidad / Vitrina Soberana</div>
         <ul>
-          <li><span>✓</span> Hasta 20 obras expuestas en la galería 3D</li>
-          <li><span>✓</span> Atenea relata la historia y técnica de tus cuadros con voz viva</li>
+          <li><span>✓</span> Hasta 20 obras o poemas expuestos en la galería 3D</li>
+          <li><span>✓</span> Atenea relata la historia y declama tus versos con voz viva</li>
           <li><span>✓</span> Botón de compra directo a tu WhatsApp personal</li>
           <li><span>✓</span> Código QR para tus exposiciones físicas</li>
           <li><span>✓</span> Notificación inmediata a tu teléfono cuando alguien se interesa</li>
@@ -449,28 +699,28 @@
     </section>
 
     <!-- CONTACTO Y DATOS DE TRANSFERENCIA -->
-    <section class="contacto-section">
+    <section class="contacto-section" id="datos-bancarios">
       <h2 class="sec-titulo">Adquisición Segura y Envíos</h2>
       <p style="color:#CBD5E1; font-size:0.95rem; max-width:650px; margin:0 auto 15px;">
         Cada acuarela es una pieza original, única e irrepetible. Envíos asegurados y protegidos a todo Chile y el extranjero.
       </p>
-      <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20consultar%20por%20las%20acuarelas" class="btn-gold" target="_blank">
+      <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20confirmar%20mi%20adquisicion%20de%20arte" class="btn-gold" target="_blank">
         <i class="fa-brands fa-whatsapp"></i> Hablar con el Artista Enrique Erazo
       </a>
 
       <div class="datos-pago">
-        <h4>Datos para Transferencia Bancaria Directa</h4>
-        <p><strong>Nombre:</strong> Enrique Erazo</p>
+        <h4>🏦 Datos Oficiales para Transferencia Bancaria</h4>
+        <p><strong>Titular:</strong> Enrique Erazo</p>
         <p><strong>RUT:</strong> 13.920.983-4</p>
         <p><strong>Banco:</strong> Banco de Chile</p>
         <p><strong>Cuenta Vista:</strong> 00-012-40202-90</p>
-        <p><strong>WhatsApp Artista:</strong> +56 9 9729 2389</p>
+        <p><strong>WhatsApp para Comprobante:</strong> +56 9 9729 2389</p>
       </div>
     </section>
 
   </div>
 
-  <!-- FOOTER CON MARCADOR DE VISITAS REAL -->
+  <!-- FOOTER -->
   <footer>
     <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D &bull; Dirección Curatorial: Sol Sánchez Contreras</p>
     <p style="margin-top:6px;">Tecnología con alma: <a href="https://terapiasol-ai.github.io/Aurion/" target="_blank">AURION &bull; IA a tu Medida</a></p>
@@ -483,171 +733,27 @@
     </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/56927541231?text=Hola%20Sol,%20quiero%20saber%20m%C3%A1s%20sobre%20fridArte" class="btn-whatsapp-flotante" target="_blank" title="Contactar por WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <!-- WIDGET FLOTANTE DE ATENEA -->
+  <div id="atenea-widget-container">
+    <div class="atenea-bubble-btn" onclick="toggleAteneaChat()">
+      <div class="atenea-avatar-pulse">
+        <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Atenea">
+      </div>
+      <div style="text-align:left; line-height:1.2;">
+        <div class="atenea-bubble-title">Atenea • Curadora</div>
+        <div class="atenea-bubble-sub">🟢 Cerrar Adquisición</div>
+      </div>
+    </div>
 
-  <!-- ============================================================== -->
-  <!-- SCRIPT: SALA 3D, VOZ DE ATENEA, CONTADOR Y GRILLA DINÁMICA -->
-  <!-- ============================================================== -->
-  <script>
-    const base = "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/";
-    const wa = "https://wa.me/56997292389?text=Hola%20Enrique%21%20Me%20interesa%20la%20acuarela%20";
-    const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras";
-
-    // CONTADOR REAL FRIDARTE (BASE 25+)
-    function inicializarContadorFridart() {
-      const baseCount = 25;
-      let visitasLocales = parseInt(localStorage.getItem("fridart_visitas_v1") || "0") + 1;
-      localStorage.setItem("fridart_visitas_v1", visitasLocales);
-      const total = baseCount + visitasLocales;
-      const el = document.getElementById("contador-numero-fridart");
-      if (el) el.innerText = total;
-    }
-    inicializarContadorFridart();
-
-    // CATÁLOGO DE 17 OBRAS CON PRECIOS EN PESOS CHILENOS
-    const obras = [
-      {"id":"obra_01","t":"Cielo Nublado","p_promo":"$85.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa. La sutileza de los grises y la transparencia del agua transmiten la calma del mar en invierno."},
-      {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"$95.000 CLP","p_old":"$150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad, fuerza interior y la fluidez orgánica del cuerpo en acuarela."},
-      {"id":"obra_03","t":"Flores de Primavera","p_promo":"$65.000 CLP","p_old":"$95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela luminosa que retrata flores silvestres en pleno florecimiento, aportando calidez y frescura a cualquier rincón."},
-      {"id":"obra_04","t":"Barco Azul","p_promo":"$88.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero tradicional navegando en alta mar rodeado de gaviotas. Un homenaje al trabajo costero y la nobleza del océano."},
-      {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"$75.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle. Una atmósfera íntima y serena de contemplación."},
-      {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"$85.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras que realzan la sensualidad, el misterio y la luz del torso."},
-      {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"$88.000 CLP","p_old":"$130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda con pinceladas sueltas y gran maestría del claroscuro."},
-      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"$90.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada donde los pigmentos se funden en el agua creando una textura envolvente y poética."},
-      {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"$80.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises. Una silueta esbelta que demuestra cómo la simpleza del trazo llena el espacio."},
-      {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"$65.000 CLP","p_old":"$90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de una flor blanca pura sobre fondo oscuro que resalta la delicadeza y fragilidad de la naturaleza."},
-      {"id":"obra_11","t":"Atardecer Rojo","p_promo":"$85.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres que llenan el ambiente de pasión, calidez y fuerza telúrica."},
-      {"id":"obra_12","t":"Marina Gris","p_promo":"$78.000 CLP","p_old":"$115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje costero bajo la bruma marina. Una acuarela minimalista con atmósfera melancólica y pacífica."},
-      {"id":"obra_13","t":"Nubes Azules","p_promo":"$75.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas que despiertan la sensación de aire limpio y horizonte abierto."},
-      {"id":"obra_14","t":"Desnudo de Frente","p_promo":"$88.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con un tratamiento sutil del color que honra la vulnerabilidad y la presencia del ser."},
-      {"id":"obra_15","t":"Desnudo con Alas","p_promo":"$90.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición alegórica donde la figura humana se funde con formas aladas que sugieren elevación espiritual y vuelo creador."},
-      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"$68.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260715-WA0044(1).jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas, símbolo de pureza y renacimiento constante."},
-      {"id":"obra_17","t":"Rosas de Rosas","p_promo":"$68.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos tiernos y vivos, un homenaje visual a la maternidad, el afecto y la belleza del jardín."}
-    ];
-
-    let indexActual = 0;
-    let voces = [];
-
-    function cargarVoces() {
-      if ('speechSynthesis' in window) {
-        voces = window.speechSynthesis.getVoices();
-      }
-    }
-    if ('speechSynthesis' in window) {
-      cargarVoces();
-      window.speechSynthesis.onvoiceschanged = cargarVoces;
-    }
-
-    // LIMPIEZA DE VOZ (DICE PESOS CHILENOS Y NUNCA DÓLARES)
-    function prepararTextoVoz(texto) {
-      return texto
-        .replace(/https?:\/\/\S+/g, "")
-        .replace(/[*#_~`]/g, "")
-        .replace(/\bfridArt\b/gi, "Fridarte")
-        .replace(/\bfridArte\b/gi, "Fridarte")
-        .replace(/\bCLP\b/gi, "pesos chilenos")
-        .replace(/\b300g\b/gi, "trescientos gramos");
-    }
-
-    // ACTUALIZAR SALA 3D
-    function actualizarSala3D() {
-      const obra = obras[indexActual];
-      const imgEl = document.getElementById("current-art-img");
-      const titleEl = document.getElementById("current-art-title");
-      const speechEl = document.getElementById("current-art-speech");
-      const priceEl = document.getElementById("current-art-price");
-      const waEl = document.getElementById("current-art-wa");
-      const frameContainer = document.getElementById("frame-container");
-
-      frameContainer.style.transform = "scale(0.95) rotateY(6deg)";
-      setTimeout(() => {
-        imgEl.src = obra.i;
-        imgEl.onerror = function() {
-          if (obra.alt_i && this.src !== obra.alt_i) this.src = obra.alt_i;
-        };
-        titleEl.innerText = `Obra ${indexActual + 1} de ${obras.length}: ${obra.t}`;
-        speechEl.innerText = `"${obra.h}"`;
-        priceEl.innerHTML = `${obra.p_promo} <span style="text-decoration:line-through; font-size:0.85rem; color:#888;">(Antes ${obra.p_old})</span>`;
-        waEl.href = obra.w;
-        frameContainer.style.transform = "scale(1) rotateY(0deg)";
-      }, 200);
-    }
-
-    function navegarObra(delta) {
-      indexActual += delta;
-      if (indexActual < 0) indexActual = obras.length - 1;
-      if (indexActual >= obras.length) indexActual = 0;
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-      actualizarSala3D();
-    }
-
-    // RELATO DE ATENEA POR VOZ
-    function escucharCuradora() {
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      const obra = obras[indexActual];
-      
-      const textoCuraduria = `Obra ${indexActual + 1}: ${obra.t}. ${obra.h}. Esta acuarela original pintada a mano por Enrique Erazo sobre papel de trescientos gramos está disponible en promoción por ${obra.p_promo.replace("CLP", "pesos chilenos")}.`;
-      
-      const utter = new SpeechSynthesisUtterance(prepararTextoVoz(textoCuraduria));
-      
-      if (voces.length === 0) cargarVoces();
-      const vozFemenina = voces.find(v => (v.lang.startsWith("es") || v.lang.includes("ES") || v.lang.includes("MX") || v.lang.includes("CL")) && (v.name.includes("Google") || v.name.includes("Sabina") || v.name.includes("Paulina") || v.name.includes("Elena") || v.name.includes("Natural"))) || voces.find(v => v.lang.startsWith("es"));
-      
-      if (vozFemenina) utter.voice = vozFemenina;
-      utter.lang = "es-CL";
-      utter.rate = 0.95;
-      utter.pitch = 1.0;
-      window.speechSynthesis.speak(utter);
-    }
-
-    // GRILLA DINÁMICA
-    const container = document.getElementById('galeria-grid');
-    obras.forEach((o, idx) => {
-      const card = document.createElement('div');
-      card.className = 'obra-card';
-
-      card.innerHTML = `
-        <div class="obra-img-box">
-          <img src="${o.i}" alt="${o.t}" loading="lazy" onerror="if(this.src!=='${o.alt_i||""}')this.src='${o.alt_i||""}';">
-        </div>
-        <div class="obra-info">
+    <div id="atenea-chat-window">
+      <div class="atenea-chat-header">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" style="width:32px; height:32px; border-radius:50%; border:1.5px solid var(--gold);" alt="Atenea">
           <div>
-            <h3>${o.t}</h3>
-            <p class="tecnica">Acuarela original sobre papel de algodón 300g</p>
-            <p class="historia">${o.h}</p>
-          </div>
-          <div>
-            <div class="price-box">
-              <span class="price-promo">${o.p_promo}</span>
-              <span class="price-old">${o.p_old}</span>
-            </div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
-              <button onclick="irASala3D(${idx})" class="btn-gold" style="padding:8px 6px; font-size:0.75rem; justify-content:center;">
-                🏛️ Ver en Sala 3D
-              </button>
-              <a href="${o.w}" target="_blank" class="btn-obra-ws">
-                <i class="fa-brands fa-whatsapp"></i> Comprar
-              </a>
-            </div>
+            <div style="color:#FFF; font-weight:700; font-size:13px; font-family:'Cinzel', serif;">Atenea Curadora</div>
+            <div style="color:var(--accent-green); font-size:10.5px;">Marchante de Arte fridArte</div>
           </div>
         </div>
-      `;
-      container.appendChild(card);
-    });
-
-    function irASala3D(idx) {
-      indexActual = idx;
-      actualizarSala3D();
-      document.getElementById('sala-3d').scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => { escucharCuradora(); }, 600);
-    }
-
-    // Iniciar con la primera obra
-    actualizarSala3D();
-  </script>
-</body>
-</html>
+        <div style="display:flex; align-items:center;">
+          <button onclick="toggleVoiceAtenea()" id="voiceToggleAtenea" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:16px; margin-right:6px;">🔊</button>
+          <button onclick="toggleAteneaChat()" style="background:none; border:none; color:var(--text-muted); font-size:20px; cur
