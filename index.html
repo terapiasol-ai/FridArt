@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fridArt | Galería de Arte Virtual 3D & Marchante con Alma</title>
+  <title>fridArte | Galería de Arte Virtual 3D & Marchante con Alma</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -44,7 +44,7 @@
 
     header h1 { color: var(--gold-light); font-size: 2.8rem; margin-bottom: 6px; }
     .subtitle { color: var(--gold); font-size: 1.15rem; font-style: italic; font-family: 'Cormorant Garamond', serif; margin-bottom: 12px; }
-    .role-desc { color: #CBD5E1; font-size: 0.95rem; max-width: 800px; margin: 0 auto 22px; line-height: 1.55; }
+    .role-desc { color: #CBD5E1; font-size: 0.95rem; max-width: 820px; margin: 0 auto 22px; line-height: 1.55; }
 
     .header-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
     .btn-gold { padding: 12px 26px; background: linear-gradient(135deg, var(--gold), #997A15); color: #0A0E14 !important; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 0.9rem; border: none; cursor: pointer; transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
@@ -66,7 +66,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 35px 15px; }
 
     /* ============================================================== */
-    /* 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D */
+    /* 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D (EXPERIENCIA INMERSIVA) */
     /* ============================================================== */
     .room-3d-wrapper {
       background: radial-gradient(circle at center, #1C1810 0%, #08080C 100%);
@@ -83,6 +83,7 @@
     .room-header h2 { color: var(--gold-light); font-size: 2rem; }
     .room-header p { color: var(--text-muted); font-size: 0.95rem; }
 
+    /* ESCENARIO Y MARCO 3D */
     .stage-3d {
       perspective: 1200px;
       max-width: 650px;
@@ -182,8 +183,8 @@
       margin-bottom: 8px;
     }
     .curator-avatar {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       border: 1.5px solid var(--gold);
     }
@@ -315,9 +316,10 @@
     }
     .datos-pago h4 { color: var(--gold-light); border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 5px; margin-bottom: 8px; }
 
+    /* FOOTER & CONTADOR */
     footer {
       background: #050507;
-      padding: 30px 15px;
+      padding: 35px 15px 25px;
       text-align: center;
       color: #78716C;
       font-size: 0.85rem;
@@ -348,16 +350,16 @@
 
   <!-- CABECERA DE LA GALERÍA -->
   <header>
-    <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Logo fridArt" class="logo-hero">
-    <h1>fridArt</h1>
+    <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Logo fridArte" class="logo-hero">
+    <h1>fridArte</h1>
     <p class="subtitle">Galería de Arte Virtual 3D & Marchante con Alma</p>
     <p class="role-desc">
-      Una vitrina soberana donde cada obra es presentada por <strong>Frida</strong>, nuestra Curadora y Marchante de Arte con Inteligencia Artificial. Relatamos la emoción, la luz y la historia de cada pieza original para dignificar el trabajo del artista.
+      Una vitrina soberana donde cada obra es presentada por <strong>Atenea</strong>, nuestra Curadora y Marchante de Arte con Inteligencia Artificial. Relatamos la emoción, la luz y la historia de las acuarelas originales del artista <strong>Enrique Erazo</strong> para dignificar el arte y conectarlo con el alma del coleccionista.
     </p>
 
     <div class="header-buttons">
       <a href="#sala-3d" class="btn-gold">🏛️ Entrar a la Sala de Exhibición 3D</a>
-      <a href="#artistas" class="btn-outline">Soy Artista, quiero exponer</a>
+      <a href="https://terapiasol-ai.github.io/Aurion/" class="btn-outline">🌟 Ir al Portal Matriz AURION</a>
     </div>
 
     <div class="promo-banner">
@@ -368,24 +370,26 @@
 
   <div class="container">
 
-    <!-- SALA 3D INTERACTIVA -->
+    <!-- ============================================================== -->
+    <!-- 🏛️ SALA DE EXHIBICIÓN VIRTUAL 3D CON VOZ DE LA CURADORA ATENEA -->
+    <!-- ============================================================== -->
     <section class="room-3d-wrapper" id="sala-3d">
       <div class="room-header">
-        <h2>🏛️ Recorrido 3D con la Curadora Frida</h2>
-        <p>Avanza de obra en obra. Toca el botón de voz para que Frida te relate la historia de la pintura.</p>
+        <h2>🏛️ Recorrido 3D con la Curadora Atenea</h2>
+        <p>Avanza de obra en obra. Toca el botón de voz para que Atenea te relate la técnica y la emoción de la pintura.</p>
       </div>
 
       <div class="stage-3d">
         <div class="spotlight"></div>
         <div class="frame-museum" id="frame-container">
-          <img id="current-art-img" src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg" alt="Obra de Arte">
+          <img id="current-art-img" src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg" alt="Acuarela Original">
         </div>
 
         <!-- CONTROLES -->
         <div class="tour-controls">
           <button class="btn-nav-art" onclick="navegarObra(-1)" title="Obra anterior">⬅️</button>
           <button class="btn-curadora-voice" onclick="escucharCuradora()">
-            <i class="fa-solid fa-volume-high"></i> <span id="voice-btn-label">Escuchar Relato de Frida</span>
+            <i class="fa-solid fa-volume-high"></i> <span id="voice-btn-label">Escuchar Relato de Atenea</span>
           </button>
           <button class="btn-nav-art" onclick="navegarObra(1)" title="Siguiente obra">➡️</button>
         </div>
@@ -393,9 +397,9 @@
         <!-- CUADRO DE CURADURÍA -->
         <div class="curator-speech-box">
           <div class="curator-header">
-            <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Frida Curadora" class="curator-avatar">
+            <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Atenea Curadora" class="curator-avatar">
             <div>
-              <div class="curator-title">Frida • Curadora y Marchante de Arte</div>
+              <div class="curator-title">Atenea • Curadora y Marchante de fridArte</div>
               <span id="current-art-title" style="color:var(--gold); font-size:0.8rem; font-weight:700;">Obra 1 de 17: Cielo Nublado</span>
             </div>
           </div>
@@ -403,7 +407,7 @@
             "Inmensidad del cielo cargado de nubes sobre la costa. Fíjate en la sutileza de los tonos grises y la transparencia del agua que baña el papel de 300 gramos..."
           </p>
           <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div id="current-art-price" style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">$70.000 CLP (Antes $120.000)</div>
+            <div id="current-art-price" style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">$85.000 CLP (Antes $120.000 CLP)</div>
             <a id="current-art-wa" href="https://wa.me/56997292389?text=Hola%20Enrique,%20me%20interesa%20la%20acuarela%20Cielo%20Nublado" target="_blank" class="btn-gold" style="padding:7px 16px; font-size:0.8rem;">
               <i class="fa-brands fa-whatsapp"></i> Adquirir esta Obra
             </a>
@@ -412,37 +416,39 @@
       </div>
     </section>
 
-    <!-- GRILLA COMPLETA DE OBRAS -->
-    <h2 class="sec-titulo">Colección Actual: Acuarelas Originales</h2>
-    <p class="sec-sub">Obras únicas pintadas a mano sobre papel de algodón 300g por el artista Enrique Erazo.</p>
+    <!-- ============================================================== -->
+    <!-- 🖼️ CATÁLOGO COMPLETO DE ACUARELAS DE ENRIQUE ERAZO -->
+    <!-- ============================================================== -->
+    <h2 class="sec-titulo">Colección de Acuarelas Originales</h2>
+    <p class="sec-sub">Obras únicas pintadas a mano sobre papel de algodón 300g por el artista y especialista Enrique Erazo.</p>
 
     <div class="galeria-grid" id="galeria-grid"></div>
 
     <!-- SECCIÓN PARA ARTISTAS -->
     <section class="artistas-section" id="artistas">
-      <h2 class="sec-titulo">¿Eres Artista? Expón tu Obra en fridArt</h2>
+      <h2 class="sec-titulo">¿Eres Artista? Expón tu Obra en fridArte</h2>
       <p style="color:#CBD5E1; max-width:700px; margin:0 auto; font-size:0.95rem;">
-        Si eres pintor o creador visual y te cuesta comercializar tu arte, fridArt es tu galería virtual con una marchante con IA que presenta y vende tus obras 24/7 ante el mundo.
+        Si eres pintor, escultor o creador visual y te cuesta comercializar tu arte, fridArte es tu galería virtual con una marchante con IA que presenta y vende tus obras 24/7 ante el mundo.
       </p>
 
       <div class="plan-card">
-        <h3 class="cinzel" style="color:var(--gold-light); font-size:1.4rem;">Plan Artista fridArt</h3>
+        <h3 class="cinzel" style="color:var(--gold-light); font-size:1.4rem;">Plan Artista fridArte</h3>
         <div class="plan-price">$45.000 CLP</div>
         <div style="color:var(--gold); font-size:0.85rem; margin-bottom:12px;">Mensualidad / Vitrina Soberana</div>
         <ul>
           <li><span>✓</span> Hasta 20 obras expuestas en la galería 3D</li>
-          <li><span>✓</span> Frida relata y presenta la historia de tus cuadros con voz viva</li>
+          <li><span>✓</span> Atenea relata la historia y técnica de tus cuadros con voz viva</li>
           <li><span>✓</span> Botón de compra directo a tu WhatsApp personal</li>
           <li><span>✓</span> Código QR para tus exposiciones físicas</li>
           <li><span>✓</span> Notificación inmediata a tu teléfono cuando alguien se interesa</li>
         </ul>
-        <a href="https://wa.me/56927541231?text=Hola%20Sol,%20soy%20artista%20y%20quiero%20exponer%20en%20fridArt" class="btn-gold" target="_blank">
+        <a href="https://wa.me/56927541231?text=Hola%20Sol,%20soy%20artista%20y%20quiero%20exponer%20en%20fridArte" class="btn-gold" target="_blank">
           🎨 Postular para Exponer
         </a>
       </div>
     </section>
 
-    <!-- DATOS DE ADQUISICIÓN Y TRANSFERENCIA -->
+    <!-- CONTACTO Y DATOS DE TRANSFERENCIA -->
     <section class="contacto-section">
       <h2 class="sec-titulo">Adquisición Segura y Envíos</h2>
       <p style="color:#CBD5E1; font-size:0.95rem; max-width:650px; margin:0 auto 15px;">
@@ -464,44 +470,62 @@
 
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER CON MARCADOR DE VISITAS REAL -->
   <footer>
-    <p>fridArt &copy; 2026 | Galería de Arte Virtual &bull; Dirección Curatorial: Sol Sánchez Contreras</p>
+    <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D &bull; Dirección Curatorial: Sol Sánchez Contreras</p>
     <p style="margin-top:6px;">Tecnología con alma: <a href="https://terapiasol-ai.github.io/Aurion/" target="_blank">AURION &bull; IA a tu Medida</a></p>
+    
+    <div style="margin-top: 15px; display: flex; justify-content: center; align-items: center;">
+      <div style="display:inline-flex; align-items:center; gap:8px; background:#14110B; padding:6px 16px; border-radius:20px; border:1.5px solid var(--gold); color:var(--gold-light); font-size:0.85rem; font-weight:700;">
+        <span>👁️ Visitas a la Galería:</span>
+        <span id="contador-numero-fridart" style="background:var(--gold); color:#0A0E14; padding:2px 8px; border-radius:10px; font-size:0.9rem;">25</span>
+      </div>
+    </div>
   </footer>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/56927541231?text=Hola%20Sol,%20quiero%20saber%20m%C3%A1s%20sobre%20fridArt" class="btn-whatsapp-flotante" target="_blank" title="Contactar por WhatsApp">
+  <a href="https://wa.me/56927541231?text=Hola%20Sol,%20quiero%20saber%20m%C3%A1s%20sobre%20fridArte" class="btn-whatsapp-flotante" target="_blank" title="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- ============================================================== -->
-  <!-- SCRIPT: SALA 3D, VOZ DE FRIDA Y ESCALA DE PRECIOS AJUSTADA -->
+  <!-- SCRIPT: SALA 3D, VOZ DE ATENEA, CONTADOR Y GRILLA DINÁMICA -->
   <!-- ============================================================== -->
   <script>
     const base = "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/";
     const wa = "https://wa.me/56997292389?text=Hola%20Enrique%21%20Me%20interesa%20la%20acuarela%20";
     const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras";
 
-    // CATÁLOGO DE 17 OBRAS CON LA NUEVA ESCALA ($60.000 / $70.000 / $80.000)
+    // CONTADOR REAL FRIDARTE (BASE 25+)
+    function inicializarContadorFridart() {
+      const baseCount = 25;
+      let visitasLocales = parseInt(localStorage.getItem("fridart_visitas_v1") || "0") + 1;
+      localStorage.setItem("fridart_visitas_v1", visitasLocales);
+      const total = baseCount + visitasLocales;
+      const el = document.getElementById("contador-numero-fridart");
+      if (el) el.innerText = total;
+    }
+    inicializarContadorFridart();
+
+    // CATÁLOGO DE 17 OBRAS CON PRECIOS EN PESOS CHILENOS
     const obras = [
-      {"id":"obra_01","t":"Cielo Nublado","p_promo":"$70.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa. La sutileza de los grises y la transparencia del agua transmiten la calma del mar en invierno."},
-      {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"$80.000 CLP","p_old":"$150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad, fuerza interior y la fluidez orgánica del cuerpo en acuarela."},
-      {"id":"obra_03","t":"Flores de Primavera","p_promo":"$60.000 CLP","p_old":"$95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela luminosa que retrata flores silvestres en pleno florecimiento, aportando calidez y frescura a cualquier rincón."},
-      {"id":"obra_04","t":"Barco Azul","p_promo":"$80.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero tradicional navegando en alta mar rodeado de gaviotas. Un homenaje al trabajo costero y la nobleza del océano."},
-      {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"$70.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle. Una atmósfera íntima y serena de contemplación."},
-      {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"$70.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras que realzan la sensualidad, el misterio y la luz del torso."},
-      {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"$80.000 CLP","p_old":"$130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda con pinceladas sueltas y gran maestría del claroscuro."},
-      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"$80.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada donde los pigmentos se funden en el agua creando una textura envolvente y poética."},
-      {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"$70.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises. Una silueta esbelta que demuestra cómo la simpleza del trazo llena el espacio."},
-      {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"$60.000 CLP","p_old":"$90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de una flor blanca pura sobre fondo oscuro que resalta la delicadeza y fragilidad de la naturaleza."},
-      {"id":"obra_11","t":"Atardecer Rojo","p_promo":"$70.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres que llenan el ambiente de pasión, calidez y fuerza telúrica."},
-      {"id":"obra_12","t":"Marina Gris","p_promo":"$70.000 CLP","p_old":"$115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje costero bajo la bruma marina. Una acuarela minimalista con atmósfera melancólica y pacífica."},
-      {"id":"obra_13","t":"Nubes Azules","p_promo":"$70.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas que despiertan la sensación de aire limpio y horizonte abierto."},
-      {"id":"obra_14","t":"Desnudo de Frente","p_promo":"$80.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con un tratamiento sutil del color que honra la vulnerabilidad y la presencia del ser."},
-      {"id":"obra_15","t":"Desnudo con Alas","p_promo":"$80.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición alegórica donde la figura humana se funde con formas aladas que sugieren elevación espiritual y vuelo creador."},
-      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"$60.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260715-WA0044(1).jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas, símbolo de pureza y renacimiento constante."},
-      {"id":"obra_17","t":"Rosas de Rosas","p_promo":"$60.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos tiernos y vivos, un homenaje visual a la maternidad, el afecto y la belleza del jardín."}
+      {"id":"obra_01","t":"Cielo Nublado","p_promo":"$85.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa. La sutileza de los grises y la transparencia del agua transmiten la calma del mar en invierno."},
+      {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"$95.000 CLP","p_old":"$150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad, fuerza interior y la fluidez orgánica del cuerpo en acuarela."},
+      {"id":"obra_03","t":"Flores de Primavera","p_promo":"$65.000 CLP","p_old":"$95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela luminosa que retrata flores silvestres en pleno florecimiento, aportando calidez y frescura a cualquier rincón."},
+      {"id":"obra_04","t":"Barco Azul","p_promo":"$88.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero tradicional navegando en alta mar rodeado de gaviotas. Un homenaje al trabajo costero y la nobleza del océano."},
+      {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"$75.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle. Una atmósfera íntima y serena de contemplación."},
+      {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"$85.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras que realzan la sensualidad, el misterio y la luz del torso."},
+      {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"$88.000 CLP","p_old":"$130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda con pinceladas sueltas y gran maestría del claroscuro."},
+      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"$90.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada donde los pigmentos se funden en el agua creando una textura envolvente y poética."},
+      {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"$80.000 CLP","p_old":"$120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises. Una silueta esbelta que demuestra cómo la simpleza del trazo llena el espacio."},
+      {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"$65.000 CLP","p_old":"$90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de una flor blanca pura sobre fondo oscuro que resalta la delicadeza y fragilidad de la naturaleza."},
+      {"id":"obra_11","t":"Atardecer Rojo","p_promo":"$85.000 CLP","p_old":"$125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres que llenan el ambiente de pasión, calidez y fuerza telúrica."},
+      {"id":"obra_12","t":"Marina Gris","p_promo":"$78.000 CLP","p_old":"$115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje costero bajo la bruma marina. Una acuarela minimalista con atmósfera melancólica y pacífica."},
+      {"id":"obra_13","t":"Nubes Azules","p_promo":"$75.000 CLP","p_old":"$110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas que despiertan la sensación de aire limpio y horizonte abierto."},
+      {"id":"obra_14","t":"Desnudo de Frente","p_promo":"$88.000 CLP","p_old":"$135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con un tratamiento sutil del color que honra la vulnerabilidad y la presencia del ser."},
+      {"id":"obra_15","t":"Desnudo con Alas","p_promo":"$90.000 CLP","p_old":"$140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición alegórica donde la figura humana se funde con formas aladas que sugieren elevación espiritual y vuelo creador."},
+      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"$68.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260715-WA0044(1).jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas, símbolo de pureza y renacimiento constante."},
+      {"id":"obra_17","t":"Rosas de Rosas","p_promo":"$68.000 CLP","p_old":"$100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos tiernos y vivos, un homenaje visual a la maternidad, el afecto y la belleza del jardín."}
     ];
 
     let indexActual = 0;
@@ -515,6 +539,17 @@
     if ('speechSynthesis' in window) {
       cargarVoces();
       window.speechSynthesis.onvoiceschanged = cargarVoces;
+    }
+
+    // LIMPIEZA DE VOZ (DICE PESOS CHILENOS Y NUNCA DÓLARES)
+    function prepararTextoVoz(texto) {
+      return texto
+        .replace(/https?:\/\/\S+/g, "")
+        .replace(/[*#_~`]/g, "")
+        .replace(/\bfridArt\b/gi, "Fridarte")
+        .replace(/\bfridArte\b/gi, "Fridarte")
+        .replace(/\bCLP\b/gi, "pesos chilenos")
+        .replace(/\b300g\b/gi, "trescientos gramos");
     }
 
     // ACTUALIZAR SALA 3D
@@ -549,18 +584,18 @@
       actualizarSala3D();
     }
 
-    // VOZ DE FRIDA
+    // RELATO DE ATENEA POR VOZ
     function escucharCuradora() {
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
       const obra = obras[indexActual];
       
-      const textoCuraduria = `Obra ${indexActual + 1}: ${obra.t}. ${obra.h}. Esta acuarela original pintada a mano sobre papel de trescientos gramos está disponible en promoción por ${obra.p_promo.replace("CLP", "pesos chilenos")}.`;
+      const textoCuraduria = `Obra ${indexActual + 1}: ${obra.t}. ${obra.h}. Esta acuarela original pintada a mano por Enrique Erazo sobre papel de trescientos gramos está disponible en promoción por ${obra.p_promo.replace("CLP", "pesos chilenos")}.`;
       
-      const utter = new SpeechSynthesisUtterance(textoCuraduria);
+      const utter = new SpeechSynthesisUtterance(prepararTextoVoz(textoCuraduria));
       
       if (voces.length === 0) cargarVoces();
-      const vozFemenina = voces.find(v => (v.lang.startsWith("es") || v.lang.includes("ES") || v.lang.includes("MX") || v.lang.includes("CL")) && (v.name.includes("Google") || v.name.includes("Sabina") || v.name.includes("Paulina") || v.name.includes("Elena") || v.name.includes("Dalia") || v.name.includes("Natural"))) || voces.find(v => v.lang.startsWith("es"));
+      const vozFemenina = voces.find(v => (v.lang.startsWith("es") || v.lang.includes("ES") || v.lang.includes("MX") || v.lang.includes("CL")) && (v.name.includes("Google") || v.name.includes("Sabina") || v.name.includes("Paulina") || v.name.includes("Elena") || v.name.includes("Natural"))) || voces.find(v => v.lang.startsWith("es"));
       
       if (vozFemenina) utter.voice = vozFemenina;
       utter.lang = "es-CL";
@@ -569,7 +604,7 @@
       window.speechSynthesis.speak(utter);
     }
 
-    // RENDERIZAR GRILLA DE CATÁLOGO
+    // GRILLA DINÁMICA
     const container = document.getElementById('galeria-grid');
     obras.forEach((o, idx) => {
       const card = document.createElement('div');
