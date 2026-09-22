@@ -18,11 +18,39 @@
       --accent-purple: #A78BFA;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Cormorant Garamond', serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
-    h1, h2, h3, h4, .cinzel { font-family: 'Cinzel', serif; letter-spacing: 1px; }
-    p, button, a, span { font-family: 'Poppins', sans-serif; }
+    /* BLINDAJE ANTI-COPIA */
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      -webkit-touch-callout: none; 
+      -webkit-user-select: none; 
+      user-select: none; 
+    }
 
+    input, textarea { 
+      -webkit-user-select: text !important; 
+      user-select: text !important; 
+    }
+
+    body { 
+      font-family: 'Cormorant Garamond', serif; 
+      background-color: var(--bg-dark); 
+      color: var(--text-light); 
+      line-height: 1.6; 
+      overflow-x: hidden; 
+    }
+
+    h1, h2, h3, h4, .cinzel { 
+      font-family: 'Cinzel', serif; 
+      letter-spacing: 1px; 
+    }
+
+    p, button, a, span { 
+      font-family: 'Poppins', sans-serif; 
+    }
+
+    /* CABECERA MUSEO */
     header {
       background: radial-gradient(circle at 50% 20%, #1F1708 0%, var(--bg-dark) 90%);
       padding: 40px 15px 30px;
@@ -31,23 +59,77 @@
     }
 
     .logo-hero {
-      width: 100px;
-      height: 100px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       border: 3px solid var(--gold);
       box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
       margin: 0 auto 12px;
       object-fit: cover;
       background: #14110B;
+      pointer-events: none;
     }
 
-    header h1 { color: var(--gold-light); font-size: 2.6rem; margin-bottom: 4px; }
-    .subtitle { color: var(--gold); font-size: 1.15rem; font-style: italic; font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; }
-    .role-desc { color: #CBD5E1; font-size: 0.92rem; max-width: 820px; margin: 0 auto 20px; line-height: 1.5; }
+    header h1 { 
+      color: var(--gold-light); 
+      font-size: 2.6rem; 
+      margin-bottom: 4px; 
+    }
 
-    .header-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-    .btn-gold { padding: 11px 22px; background: linear-gradient(135deg, var(--gold), #997A15); color: #0A0E14 !important; text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 0.88rem; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-outline { padding: 11px 20px; border: 1.5px solid var(--gold); color: var(--gold-light); text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 0.88rem; }
+    .subtitle { 
+      color: var(--gold); 
+      font-size: 1.15rem; 
+      font-style: italic; 
+      font-family: 'Cormorant Garamond', serif; 
+      margin-bottom: 10px; 
+    }
+
+    .role-desc { 
+      color: #CBD5E1; 
+      font-size: 0.92rem; 
+      max-width: 820px; 
+      margin: 0 auto 20px; 
+      line-height: 1.5; 
+    }
+
+    .header-buttons { 
+      display: flex; 
+      gap: 10px; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+      margin-bottom: 20px; 
+    }
+
+    .btn-gold { 
+      padding: 11px 22px; 
+      background: linear-gradient(135deg, var(--gold), #997A15); 
+      color: #0A0E14 !important; 
+      text-decoration: none; 
+      border-radius: 25px; 
+      font-weight: 700; 
+      font-size: 0.88rem; 
+      border: none; 
+      cursor: pointer; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      transition: transform 0.2s;
+    }
+
+    .btn-gold:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-outline { 
+      padding: 11px 20px; 
+      border: 1.5px solid var(--gold); 
+      color: var(--gold-light); 
+      text-decoration: none; 
+      border-radius: 25px; 
+      font-weight: 700; 
+      font-size: 0.88rem; 
+      transition: background 0.2s;
+    }
 
     .promo-banner {
       background: rgba(212, 175, 55, 0.08);
@@ -58,10 +140,24 @@
       padding: 10px 16px;
       text-align: center;
     }
-    .promo-banner h3 { color: var(--gold-light); font-size: 1rem; margin-bottom: 2px; }
-    .promo-banner p { color: #FFF; font-size: 0.88rem; font-weight: 600; }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 30px 15px; }
+    .promo-banner h3 { 
+      color: var(--gold-light); 
+      font-size: 1rem; 
+      margin-bottom: 2px; 
+    }
+
+    .promo-banner p { 
+      color: #FFF; 
+      font-size: 0.88rem; 
+      font-weight: 600; 
+    }
+
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 30px 15px; 
+    }
 
     /* SALA 3D */
     .room-3d-wrapper {
@@ -75,9 +171,20 @@
       overflow: hidden;
     }
 
-    .room-header { text-align: center; margin-bottom: 20px; }
-    .room-header h2 { color: var(--gold-light); font-size: 1.9rem; }
-    .room-header p { color: var(--text-muted); font-size: 0.92rem; }
+    .room-header { 
+      text-align: center; 
+      margin-bottom: 20px; 
+    }
+
+    .room-header h2 { 
+      color: var(--gold-light); 
+      font-size: 1.9rem; 
+    }
+
+    .room-header p { 
+      color: var(--text-muted); 
+      font-size: 0.92rem; 
+    }
 
     .stage-3d {
       perspective: 1200px;
@@ -105,18 +212,91 @@
       transition: transform 0.4s ease;
     }
 
-    .frame-museum img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .spotlight { position: absolute; top: -50px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%); pointer-events: none; z-index: 1; }
+    .frame-museum img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+      pointer-events: none; 
+    }
 
-    .tour-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
-    .btn-nav-art { background: #1A140A; border: 1.5px solid var(--gold); color: var(--gold-light); width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; }
-    .btn-curadora-voice { background: linear-gradient(135deg, var(--gold), #8B6914); color: #0A0E14; border: none; padding: 10px 20px; border-radius: 25px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .spotlight { 
+      position: absolute; 
+      top: -50px; 
+      width: 280px; 
+      height: 280px; 
+      background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%); 
+      pointer-events: none; 
+      z-index: 1; 
+    }
 
-    .curator-speech-box { background: rgba(20, 16, 10, 0.9); border: 1px solid var(--gold); border-radius: 12px; padding: 18px; max-width: 580px; margin: 18px auto 0; text-align: left; }
-    .curator-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-    .curator-avatar { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--gold); }
-    .curator-title { color: var(--gold-light); font-size: 0.92rem; font-weight: 700; }
-    .curator-text { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #E8E0D0; font-style: italic; line-height: 1.5; }
+    .tour-controls { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 12px; 
+      margin-top: 18px; 
+      flex-wrap: wrap; 
+    }
+
+    .btn-nav-art { 
+      background: #1A140A; 
+      border: 1.5px solid var(--gold); 
+      color: var(--gold-light); 
+      width: 42px; 
+      height: 42px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      cursor: pointer; 
+      font-size: 1rem; 
+      transition: all 0.2s;
+    }
+
+    .btn-nav-art:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    .curator-speech-box { 
+      background: rgba(20, 16, 10, 0.9); 
+      border: 1px solid var(--gold); 
+      border-radius: 12px; 
+      padding: 18px; 
+      max-width: 580px; 
+      margin: 18px auto 0; 
+      text-align: left; 
+    }
+
+    .curator-header { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      margin-bottom: 6px; 
+    }
+
+    .curator-avatar { 
+      width: 38px; 
+      height: 38px; 
+      border-radius: 50%; 
+      border: 1.5px solid var(--gold); 
+      pointer-events: none; 
+    }
+
+    .curator-title { 
+      color: var(--gold-light); 
+      font-size: 0.92rem; 
+      font-weight: 700; 
+    }
+
+    .curator-text { 
+      font-family: 'Cormorant Garamond', serif; 
+      font-size: 1.15rem; 
+      color: #E8E0D0; 
+      font-style: italic; 
+      line-height: 1.5; 
+    }
 
     /* SALÓN DE POESÍA */
     .literary-salon {
@@ -147,7 +327,9 @@
       cursor: pointer;
       font-size: 0.82rem;
       font-weight: 600;
+      transition: all 0.2s;
     }
+
     .btn-poem-tab.active {
       background: var(--gold);
       color: #0A0E14 !important;
@@ -162,6 +344,7 @@
       max-width: 680px;
       margin: 0 auto;
       text-align: center;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
     }
 
     .poem-title-display {
@@ -183,7 +366,6 @@
       text-align: left;
       max-width: 540px;
       margin: 0 auto 20px;
-      user-select: none;
     }
 
     .recording-studio-box {
@@ -195,20 +377,59 @@
       text-align: center;
     }
 
-    .btn-rec { background: #DC2626; color: #FFF; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-stop { background: #475569; color: #FFF; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: none; align-items: center; gap: 6px; }
-    .btn-download-audio { background: #16A34A; color: #FFF; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: none; align-items: center; gap: 6px; text-decoration: none; }
+    .btn-rec { 
+      background: #DC2626; 
+      color: #FFF; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 20px; 
+      font-weight: 700; 
+      font-size: 0.82rem; 
+      cursor: pointer; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+    }
+
+    .btn-stop { 
+      background: #475569; 
+      color: #FFF; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 20px; 
+      font-weight: 700; 
+      font-size: 0.82rem; 
+      cursor: pointer; 
+      display: none; 
+      align-items: center; 
+      gap: 6px; 
+    }
+
+    .btn-download-audio { 
+      background: #16A34A; 
+      color: #FFF; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 20px; 
+      font-weight: 700; 
+      font-size: 0.82rem; 
+      cursor: pointer; 
+      display: none; 
+      align-items: center; 
+      gap: 6px; 
+      text-decoration: none; 
+    }
 
     .copyright-shield-box {
       background: #141009;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      border-radius: 10px;
-      padding: 12px;
+      border: 1.5px solid var(--gold);
+      border-radius: 12px;
+      padding: 14px;
       margin: 18px auto 0;
       max-width: 600px;
       text-align: center;
-      font-size: 0.76rem;
-      color: #A8A29E;
+      font-size: 0.78rem;
+      color: #CBD5E1;
     }
 
     .poemario-sale-card {
@@ -222,10 +443,25 @@
     }
 
     /* CATÁLOGO GRILLA */
-    .sec-titulo { text-align: center; font-size: 2.1rem; color: var(--gold-light); margin-bottom: 6px; }
-    .sec-sub { text-align: center; color: var(--text-muted); margin-bottom: 25px; font-size: 0.92rem; }
+    .sec-titulo { 
+      text-align: center; 
+      font-size: 2.1rem; 
+      color: var(--gold-light); 
+      margin-bottom: 6px; 
+    }
 
-    .galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .sec-sub { 
+      text-align: center; 
+      color: var(--text-muted); 
+      margin-bottom: 25px; 
+      font-size: 0.92rem; 
+    }
+
+    .galeria-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 22px; 
+    }
 
     .obra-card {
       background: var(--card-bg);
@@ -235,73 +471,322 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: all 0.25s;
     }
 
-    .obra-img-box { width: 100%; height: 290px; overflow: hidden; background: #0E0E12; }
-    .obra-img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .obra-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    }
 
-    .obra-info { padding: 16px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .obra-info h3 { color: var(--gold-light); font-size: 1.25rem; margin-bottom: 3px; font-family: 'Cormorant Garamond', serif; font-weight: 700; }
-    .obra-info .tecnica { color: var(--text-muted); font-size: 0.78rem; font-style: italic; margin-bottom: 6px; }
-    .obra-info .historia { color: #CBD5E1; font-size: 0.86rem; line-height: 1.4; margin-bottom: 10px; }
+    .obra-img-box { 
+      width: 100%; 
+      height: 290px; 
+      overflow: hidden; 
+      background: #0E0E12; 
+    }
 
-    .price-box { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; background: rgba(212, 175, 55, 0.08); padding: 7px 10px; border-radius: 8px; }
-    .price-promo { color: var(--gold-light); font-size: 1.2rem; font-weight: 700; }
-    .price-old { color: #737373; text-decoration: line-through; font-size: 0.82rem; }
+    .obra-img-box img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      pointer-events: none; 
+      transition: transform 0.4s ease;
+    }
 
-    .btn-obra-ws { padding: 9px 14px; background: linear-gradient(135deg, #25D366, #1EBE5D); color: #FFF !important; text-decoration: none; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .obra-card:hover .obra-img-box img {
+      transform: scale(1.04);
+    }
 
-    .artistas-section { background: linear-gradient(135deg, #161208, #0A0A0E); border: 2px solid var(--gold); border-radius: 16px; padding: 35px 18px; margin: 45px 0; text-align: center; }
-    .plan-card { background: #110E08; border: 1.5px solid var(--gold); border-radius: 12px; padding: 22px; max-width: 440px; margin: 20px auto 0; }
-    .plan-price { font-size: 2rem; color: var(--gold-light); font-weight: 800; font-family: 'Cinzel', serif; }
-    .plan-card ul { list-style: none; text-align: left; max-width: 360px; margin: 12px auto 18px; font-size: 0.86rem; color: #CBD5E1; }
-    .plan-card ul li { padding: 5px 0; border-bottom: 1px solid rgba(212,175,55,0.15); }
-    .plan-card ul li span { color: var(--gold); font-weight: bold; margin-right: 6px; }
+    .obra-info { 
+      padding: 16px; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-between; 
+    }
 
-    .contacto-section { background: #0D0D12; border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 30px 18px; text-align: center; margin-bottom: 35px; }
-    .datos-pago { background: #14110B; border: 1.5px solid var(--gold); border-radius: 12px; padding: 18px; max-width: 440px; margin: 18px auto 0; text-align: left; font-size: 0.9rem; }
+    .obra-info h3 { 
+      color: var(--gold-light); 
+      font-size: 1.25rem; 
+      margin-bottom: 3px; 
+      font-family: 'Cormorant Garamond', serif; 
+      font-weight: 700; 
+    }
 
-    footer { background: #050507; padding: 30px 15px 20px; text-align: center; color: #78716C; font-size: 0.82rem; border-top: 1px solid #1C1917; }
-    footer a { color: var(--gold-light); text-decoration: none; }
+    .obra-info .tecnica { 
+      color: var(--text-muted); 
+      font-size: 0.78rem; 
+      font-style: italic; 
+      margin-bottom: 6px; 
+    }
+
+    .obra-info .historia { 
+      color: #CBD5E1; 
+      font-size: 0.86rem; 
+      line-height: 1.4; 
+      margin-bottom: 10px; 
+    }
+
+    .price-box { 
+      display: flex; 
+      align-items: baseline; 
+      gap: 10px; 
+      margin-bottom: 10px; 
+      background: rgba(212, 175, 55, 0.08); 
+      padding: 7px 10px; 
+      border-radius: 8px; 
+    }
+
+    .price-promo { 
+      color: var(--gold-light); 
+      font-size: 1.2rem; 
+      font-weight: 700; 
+    }
+
+    .price-old { 
+      color: #737373; 
+      text-decoration: line-through; 
+      font-size: 0.82rem; 
+    }
+
+    .btn-obra-ws { 
+      padding: 9px 14px; 
+      background: linear-gradient(135deg, #25D366, #1EBE5D); 
+      color: #FFF !important; 
+      text-decoration: none; 
+      border-radius: 20px; 
+      font-size: 0.82rem; 
+      font-weight: 700; 
+      text-align: center; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 6px; 
+      transition: transform 0.2s;
+    }
+
+    .btn-obra-ws:hover {
+      transform: scale(1.02);
+    }
+
+    .artistas-section { 
+      background: linear-gradient(135deg, #161208, #0A0A0E); 
+      border: 2px solid var(--gold); 
+      border-radius: 16px; 
+      padding: 35px 18px; 
+      margin: 45px 0; 
+      text-align: center; 
+    }
+
+    .plan-card { 
+      background: #110E08; 
+      border: 1.5px solid var(--gold); 
+      border-radius: 12px; 
+      padding: 22px; 
+      max-width: 440px; 
+      margin: 20px auto 0; 
+    }
+
+    .contacto-section { 
+      background: #0D0D12; 
+      border: 1px solid rgba(212, 175, 55, 0.25); 
+      border-radius: 14px; 
+      padding: 30px 18px; 
+      text-align: center; 
+      margin-bottom: 35px; 
+    }
+
+    .datos-pago { 
+      background: #14110B; 
+      border: 1.5px solid var(--gold); 
+      border-radius: 12px; 
+      padding: 18px; 
+      max-width: 440px; 
+      margin: 18px auto 0; 
+      text-align: left; 
+      font-size: 0.9rem; 
+    }
+
+    footer { 
+      background: #050507; 
+      padding: 30px 15px 20px; 
+      text-align: center; 
+      color: #78716C; 
+      font-size: 0.82rem; 
+      border-top: 1px solid #1C1917; 
+    }
+
+    footer a { 
+      color: var(--gold-light); 
+      text-decoration: none; 
+    }
 
     /* WIDGET ATENEA */
-    #atenea-widget-container { position: fixed; bottom: 20px; right: 15px; z-index: 9999999; }
-    .atenea-bubble-btn { background: rgba(18, 14, 8, 0.95); border: 2px solid var(--gold); border-radius: 50px; padding: 6px 14px; display: flex; align-items: center; cursor: pointer; box-shadow: 0 6px 25px rgba(0,0,0,0.6); }
-    .atenea-avatar-pulse { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); overflow: hidden; margin-right: 10px; flex-shrink: 0; }
-    .atenea-avatar-pulse img { width: 100%; height: 100%; object-fit: cover; }
-    .atenea-bubble-title { color: var(--gold-light); font-size: 12.5px; font-weight: 700; font-family: 'Cinzel', serif; }
-    .atenea-bubble-sub { color: var(--accent-green); font-size: 10.5px; font-weight: 600; }
+    #atenea-widget-container { 
+      position: fixed; 
+      bottom: 20px; 
+      right: 15px; 
+      z-index: 9999999; 
+    }
 
-    #atenea-chat-window { display: none; position: fixed; bottom: 75px; right: 10px; left: 10px; max-width: 380px; margin: 0 auto; height: 480px; background: #110E0A; border: 2px solid var(--gold); border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.85); flex-direction: column; overflow: hidden; z-index: 9999999; }
-    .atenea-chat-header { background: #1A140B; border-bottom: 1.5px solid var(--gold); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; }
-    .atenea-chat-messages { flex: 1; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; background: #0D0A06; }
-    .msg-atenea { background: #17120B; border: 1px solid rgba(212, 175, 55, 0.35); color: #E8E0D0; padding: 11px 13px; border-radius: 14px 14px 14px 2px; max-width: 90%; line-height: 1.45; align-self: flex-start; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
-    .msg-user-art { background: linear-gradient(135deg, var(--gold), #8B6914); color: #0A0E14; padding: 9px 13px; border-radius: 14px 14px 2px 14px; max-width: 85%; font-weight: 600; line-height: 1.4; align-self: flex-end; font-family: 'Poppins', sans-serif; font-size: 0.85rem; }
-    .atenea-input-box { padding: 9px; background: #140F08; border-top: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; gap: 8px; }
-    .atenea-mic-btn { background: var(--gold); border: none; color: #0A0E14; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .atenea-input-box input { flex: 1; background: #1D160C; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; padding: 8px 12px; color: #FFF; font-size: 0.88rem; outline: none; font-family: 'Poppins', sans-serif; }
-    .atenea-send-btn { background: var(--gold); border: none; color: #0A0E14; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .atenea-bubble-btn { 
+      background: rgba(18, 14, 8, 0.95); 
+      border: 2px solid var(--gold); 
+      border-radius: 50px; 
+      padding: 6px 14px; 
+      display: flex; 
+      align-items: center; 
+      cursor: pointer; 
+      box-shadow: 0 6px 25px rgba(0,0,0,0.6); 
+    }
+
+    .atenea-avatar-pulse { 
+      width: 40px; 
+      height: 40px; 
+      border-radius: 50%; 
+      border: 2px solid var(--gold); 
+      overflow: hidden; 
+      margin-right: 10px; 
+      flex-shrink: 0; 
+    }
+
+    .atenea-avatar-pulse img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    #atenea-chat-window { 
+      display: none; 
+      position: fixed; 
+      bottom: 75px; 
+      right: 10px; 
+      left: 10px; 
+      max-width: 380px; 
+      margin: 0 auto; 
+      height: 480px; 
+      background: #110E0A; 
+      border: 2px solid var(--gold); 
+      border-radius: 18px; 
+      box-shadow: 0 12px 40px rgba(0,0,0,0.85); 
+      flex-direction: column; 
+      overflow: hidden; 
+      z-index: 9999999; 
+    }
+
+    .atenea-chat-header { 
+      background: #1A140B; 
+      border-bottom: 1.5px solid var(--gold); 
+      padding: 10px 14px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+
+    .atenea-chat-messages { 
+      flex: 1; 
+      padding: 14px; 
+      overflow-y: auto; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 10px; 
+      font-size: 0.9rem; 
+      background: #0D0A06; 
+    }
+
+    .msg-atenea { 
+      background: #17120B; 
+      border: 1px solid rgba(212, 175, 55, 0.35); 
+      color: #E8E0D0; 
+      padding: 11px 13px; 
+      border-radius: 14px 14px 14px 2px; 
+      max-width: 90%; 
+      line-height: 1.45; 
+      font-size: 1.15rem; 
+    }
+
+    .msg-user-art { 
+      background: linear-gradient(135deg, var(--gold), #8B6914); 
+      color: #0A0E14; 
+      padding: 9px 13px; 
+      border-radius: 14px 14px 2px 14px; 
+      max-width: 85%; 
+      font-weight: 600; 
+      font-size: 0.85rem; 
+      align-self: flex-end; 
+    }
+
+    .atenea-input-box { 
+      padding: 9px; 
+      background: #140F08; 
+      border-top: 1px solid rgba(212, 175, 55, 0.2); 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+    }
+
+    .atenea-mic-btn { 
+      background: var(--gold); 
+      border: none; 
+      color: #0A0E14; 
+      border-radius: 50%; 
+      width: 36px; 
+      height: 36px; 
+      cursor: pointer; 
+      font-size: 15px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-shrink: 0; 
+    }
+
+    .atenea-input-box input { 
+      flex: 1; 
+      background: #1D160C; 
+      border: 1px solid rgba(212, 175, 55, 0.3); 
+      border-radius: 20px; 
+      padding: 8px 12px; 
+      color: #FFF; 
+      font-size: 0.88rem; 
+      outline: none; 
+    }
+
+    .atenea-send-btn { 
+      background: var(--gold); 
+      border: none; 
+      color: #0A0E14; 
+      border-radius: 50%; 
+      width: 36px; 
+      height: 36px; 
+      cursor: pointer; 
+      font-size: 15px; 
+      font-weight: bold; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-shrink: 0; 
+    }
   </style>
 </head>
 <body>
 
+  <!-- CABECERA -->
   <header>
     <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Logo fridArte" class="logo-hero">
     <h1>fridArte</h1>
     <p class="subtitle">Galería de Arte Virtual 3D & Ateneo de Letras Vivas</p>
     <p class="role-desc">
-      Un espacio patrimonial donde convergen la luz de las acuarelas y la fuerza de la poesía viva del artista <strong>Enrique Ángel Erazo</strong> (especialista de la visión, pintor y poeta), presentadas con el alma curatorial de <strong>Atenea</strong>.
+      Acuarelas originales y poesía viva del artista <strong>Enrique Ángel Erazo</strong> (especialista de la visión, pintor y poeta), presentadas por <strong>Atenea</strong>.
     </p>
-
     <div class="header-buttons">
       <a href="#sala-3d" class="btn-gold">🏛️ Sala de Acuarelas 3D</a>
-      <a href="#salon-letras" class="btn-gold" style="background:linear-gradient(135deg,#9333EA,#6B21A8); color:#FFF !important;">📜 Salón de Poesía Viva</a>
+      <a href="#salon-letras" class="btn-gold" style="background:linear-gradient(135deg,#9333EA,#6B21A8); color:#FFF!important;">📜 Salón de Poesía Viva</a>
       <a href="https://terapiasol-ai.github.io/Aurion/" class="btn-outline">🌟 Portal Matriz AURION</a>
     </div>
-
     <div class="promo-banner">
-      <h3>✨ Oportunidad de Colección ✨</h3>
-      <p>¡Lleva 2 acuarelas originales y obtén un 25% DE DESCUENTO adicional en tu compra!</p>
+      <p>✨ ¡Lleva 2 acuarelas originales y obtén un 25% DE DESCUENTO adicional en tu compra! ✨</p>
     </div>
   </header>
 
@@ -309,41 +794,30 @@
 
     <!-- SALA 3D ACUARELAS -->
     <section class="room-3d-wrapper" id="sala-3d">
-      <div class="room-header">
-        <h2>🏛️ Recorrido 3D con la Curadora Atenea</h2>
-        <p>Avanza de obra en obra. Toca el botón de voz para que Atenea te relate la técnica y la emoción de la pintura.</p>
-      </div>
-
+      <h2>🏛️ Recorrido 3D con la Curadora Atenea</h2>
+      <p style="color:var(--text-muted); margin-bottom:20px;">Avanza de obra en obra. Toca el botón de voz para escuchar el relato.</p>
       <div class="stage-3d">
         <div class="spotlight"></div>
         <div class="frame-museum" id="frame-container">
           <img id="current-art-img" src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/IMG-20260715-WA0021.jpg" alt="Acuarela Original">
         </div>
-
         <div class="tour-controls">
-          <button class="btn-nav-art" onclick="navegarObra(-1)" title="Obra anterior">⬅️</button>
-          <button class="btn-curadora-voice" onclick="escucharCuradora()">
-            <i class="fa-solid fa-volume-high"></i> <span id="voice-btn-label">Escuchar Relato de Atenea</span>
-          </button>
-          <button class="btn-nav-art" onclick="navegarObra(1)" title="Siguiente obra">➡️</button>
+          <button class="btn-nav-art" onclick="navegarObra(-1)">⬅️</button>
+          <button class="btn-gold" onclick="escucharCuradora()"><i class="fa-solid fa-volume-high"></i> Escuchar a Atenea</button>
+          <button class="btn-nav-art" onclick="navegarObra(1)">➡️</button>
         </div>
-
         <div class="curator-speech-box">
-          <div class="curator-header">
-            <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Atenea Curadora" class="curator-avatar">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" style="width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);" alt="Atenea">
             <div>
-              <div class="curator-title">Atenea • Curadora y Marchante de fridArte</div>
-              <span id="current-art-title" style="color:var(--gold); font-size:0.8rem; font-weight:700;">Obra 1 de 17: Cielo Nublado</span>
+              <div style="color:var(--gold-light);font-weight:700;font-size:0.92rem;">Atenea • Curadora fridArte</div>
+              <span id="current-art-title" style="color:var(--gold);font-size:0.8rem;font-weight:700;">Obra 1 de 17: Cielo Nublado</span>
             </div>
           </div>
-          <p class="curator-text" id="current-art-speech">
-            "Inmensidad del cielo cargado de nubes sobre la costa. Fíjate en la sutileza de los tonos grises y la transparencia del agua que baña el papel de 300 gramos..."
-          </p>
-          <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div id="current-art-price" style="color:var(--gold-light); font-weight:800; font-size:1.05rem;">85.000 pesos chilenos (Antes 120.000)</div>
-            <a id="current-art-wa" href="https://wa.me/56997292389?text=Hola%20Enrique,%20me%20interesa%20la%20acuarela%20Cielo%20Nublado" target="_blank" class="btn-gold" style="padding:6px 14px; font-size:0.78rem;">
-              <i class="fa-brands fa-whatsapp"></i> Adquirir esta Obra
-            </a>
+          <p class="curator-text" id="current-art-speech">"Inmensidad del cielo cargado de nubes sobre la costa..."</p>
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+            <div id="current-art-price" style="color:var(--gold-light);font-weight:800;font-size:1.05rem;">85.000 pesos chilenos</div>
+            <a id="current-art-wa" href="#" target="_blank" class="btn-gold" style="padding:6px 14px;font-size:0.78rem;"><i class="fa-brands fa-whatsapp"></i> Adquirir esta Obra</a>
           </div>
         </div>
       </div>
@@ -351,68 +825,41 @@
 
     <!-- SALÓN DE POESÍA VIVA -->
     <section class="literary-salon" id="salon-letras">
-      <div style="text-align:center; margin-bottom:20px;">
-        <i class="fa-solid fa-feather-pointed text-amber-400" style="font-size:2.2rem; margin-bottom:6px;"></i>
-        <h2 style="color:var(--gold-light); font-size:2rem; font-family:'Cinzel', serif;">Salón de Poesía & Letras Vivas</h2>
-        <p style="color:var(--text-muted); font-size:0.92rem; max-width:750px; margin:0 auto;">
-          La palabra poética y existencial de <strong>Enrique Ángel Erazo</strong>. Selecciona cualquiera de sus 15 poemas para leer sus versos o grabarlos directamente.
-        </p>
+      <div style="text-align:center;margin-bottom:20px;">
+        <i class="fa-solid fa-feather-pointed" style="color:var(--gold);font-size:2rem;margin-bottom:6px;"></i>
+        <h2 style="color:var(--gold-light);font-size:2rem;">Salón de Poesía & Letras Vivas</h2>
+        <p style="color:var(--text-muted);font-size:0.92rem;">La palabra poética y existencial de <strong>Enrique Ángel Erazo</strong>.</p>
       </div>
 
-      <!-- SELECTOR DE LOS 15 POEMAS -->
       <div class="poem-selector-grid" id="poemTabsContainer"></div>
 
-      <!-- MANUSCRITO / LIBRO ABIERTO -->
       <div class="parchment-book">
         <h3 class="poem-title-display" id="displayPoemTitle">Turista del futuro</h3>
 
-        <!-- ESTUDIO DE GRABACIÓN DIRECTO PARA ENRIQUE -->
         <div class="recording-studio-box">
-          <h4 style="color:var(--gold-light); font-size:0.95rem; margin-bottom:6px;">🎙️ Estudio de Declamación de Autor</h4>
-          <p style="font-size:0.8rem; color:#CBD5E1;">
-            Enrique puede presionar grabar, recitar su poema con calma y descargar el archivo de audio.
-          </p>
-          <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:10px;">
-            <button class="btn-rec" id="btnStartRec" onclick="iniciarGrabacionPoema()">
-              <i class="fa-solid fa-circle"></i> Grabar mi Voz
-            </button>
-            <button class="btn-stop" id="btnStopRec" onclick="detenerGrabacionPoema()">
-              <i class="fa-solid fa-stop"></i> Detener y Escuchar
-            </button>
-            <a id="btnDownloadAudio" class="btn-download-audio" download="poema_audio.webm">
-              <i class="fa-solid fa-download"></i> Guardar Audio
-            </a>
+          <h4 style="color:var(--gold-light);font-size:0.95rem;margin-bottom:6px;">🎙️ Estudio de Declamación de Autor</h4>
+          <p style="font-size:0.8rem;color:#CBD5E1;">Enrique puede presionar grabar, recitar su poema y descargar el audio listo.</p>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px;">
+            <button class="btn-rec" id="btnStartRec" onclick="iniciarGrabacionPoema()"><i class="fa-solid fa-circle"></i> Grabar mi Voz</button>
+            <button class="btn-stop" id="btnStopRec" onclick="detenerGrabacionPoema()"><i class="fa-solid fa-stop"></i> Detener y Escuchar</button>
+            <a id="btnDownloadAudio" class="btn-download-audio" download="poema_audio.webm"><i class="fa-solid fa-download"></i> Guardar Audio</a>
           </div>
-          <audio id="audioPlaybackWeb" controls style="width:100%; max-width:360px; height:34px; margin-top:10px; display:none;"></audio>
+          <audio id="audioPlaybackWeb" controls style="width:100%;max-width:360px;height:34px;margin-top:10px;display:none;"></audio>
         </div>
 
-        <!-- TEXTO DEL POEMA -->
         <p class="poem-body-display" id="displayPoemBody"></p>
 
-        <!-- SELLO DE DERECHOS DE AUTOR -->
         <div class="copyright-shield-box">
-          <p>
-            <i class="fa-solid fa-shield-halved text-amber-400"></i> <strong>© 2026 Enrique Ángel Erazo. Todos los derechos reservados.</strong><br>
-            Obra poética y artística protegida bajo la <strong>Ley N° 17.336 de Propiedad Intelectual</strong>. Prohibida su copia, reproducción total o parcial, plagio o distribución sin autorización escrita del autor.
-          </p>
+          <p><i class="fa-solid fa-shield-halved" style="color:var(--gold);"></i> <strong>© 2026 Enrique Ángel Erazo. Todos los derechos reservados.</strong><br>Obra poética protegida bajo la <strong>Ley N° 17.336 de Propiedad Intelectual</strong>. Prohibida su copia o reproducción sin autorización.</p>
         </div>
 
-        <!-- TARJETA DE VENTA DEL POEMARIO -->
         <div class="poemario-sale-card">
-          <h4 style="color:var(--gold-light); font-size:1.2rem; margin-bottom:6px;">📖 Adquiere el Poemario Digital «Bitácora del Despertar»</h4>
-          <p style="font-size:0.86rem; color:#CBD5E1; margin-bottom:12px;">
-            Edición de Autor en PDF de alta definición con los 15 poemas completos, reflexiones inéditas y dedicatoria personalizada.
-          </p>
-          <div style="font-size:1.2rem; font-weight:800; color:var(--gold-light); margin-bottom:10px;">
-            $15.000 CLP <span style="font-size:0.78rem; font-weight:normal; color:#CBD5E1;">(Aporte / Mecenazgo)</span>
-          </div>
-          <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
-            <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20adquirir%20tu%20Poemario%20Digital%20Bitacora%20del%20Despertar" target="_blank" class="btn-gold" style="font-size:0.82rem;">
-              <i class="fa-brands fa-whatsapp"></i> Adquirir por WhatsApp
-            </a>
-            <button onclick="document.getElementById('datos-bancarios').scrollIntoView({behavior:'smooth'})" class="btn-outline" style="font-size:0.82rem;">
-              🏦 Ver Datos Bancarios
-            </button>
+          <h4 style="color:var(--gold-light);font-size:1.2rem;margin-bottom:6px;">📖 Poemario Digital «Bitácora del Despertar»</h4>
+          <p style="font-size:0.86rem;color:#CBD5E1;margin-bottom:12px;">Edición de Autor en PDF con los 15 poemas completos y dedicatoria.</p>
+          <div style="font-size:1.2rem;font-weight:800;color:var(--gold-light);margin-bottom:10px;">$15.000 CLP <span style="font-size:0.78rem;font-weight:normal;color:#CBD5E1;">(Mecenazgo)</span></div>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20adquirir%20tu%20Poemario%20Digital" target="_blank" class="btn-gold" style="font-size:0.82rem;"><i class="fa-brands fa-whatsapp"></i> Adquirir por WhatsApp</a>
+            <button onclick="document.getElementById('datos-bancarios').scrollIntoView({behavior:'smooth'})" class="btn-outline" style="font-size:0.82rem;">🏦 Ver Datos Bancarios</button>
           </div>
         </div>
       </div>
@@ -420,45 +867,28 @@
 
     <!-- CATÁLOGO ACUARELAS -->
     <h2 class="sec-titulo">Colección de Acuarelas Originales</h2>
-    <p class="sec-sub">Obras únicas pintadas a mano sobre papel de algodón 300g por Enrique Erazo.</p>
-
+    <p class="sec-sub">Obras únicas sobre papel de algodón 300g por Enrique Erazo.</p>
     <div class="galeria-grid" id="galeria-grid"></div>
 
     <!-- SECCIÓN ARTISTAS -->
     <section class="artistas-section" id="artistas">
       <h2 class="sec-titulo">¿Eres Artista o Escritor? Expón en fridArte</h2>
-      <p style="color:#CBD5E1; max-width:700px; margin:0 auto; font-size:0.92rem;">
-        fridArte es tu vitrina soberana con inteligencia artificial para presentar y vender tus obras pictóricas o literarias 24/7 ante el mundo.
-      </p>
-
+      <p style="color:#CBD5E1;max-width:700px;margin:0 auto;font-size:0.92rem;">Vitrina soberana con IA para presentar y vender tus obras 24/7.</p>
       <div class="plan-card">
-        <h3 class="cinzel" style="color:var(--gold-light); font-size:1.3rem;">Plan Artista fridArte</h3>
-        <div class="plan-price">45.000 CLP</div>
-        <div style="color:var(--gold); font-size:0.82rem; margin-bottom:10px;">Mensualidad / Vitrina Soberana</div>
-        <ul>
-          <li><span>✓</span> Hasta 20 obras expuestas en la galería 3D y salón literario</li>
-          <li><span>✓</span> Atenea relata la historia y técnica de tus cuadros con voz viva</li>
-          <li><span>✓</span> Botón de compra directo a tu WhatsApp personal</li>
-          <li><span>✓</span> Notificación inmediata a tu teléfono cuando alguien se interesa</li>
-        </ul>
-        <a href="https://wa.me/56927541231?text=Hola%20Sol,%20soy%20creador%20y%20quiero%20exponer%20en%20fridArte" class="btn-gold" target="_blank">
-          🎨 Postular para Exponer
-        </a>
+        <h3 style="color:var(--gold-light);font-size:1.3rem;">Plan Artista fridArte</h3>
+        <div style="font-size:2rem;color:var(--gold-light);font-weight:800;font-family:'Cinzel',serif;">45.000 CLP</div>
+        <p style="color:var(--gold);font-size:0.82rem;margin-bottom:10px;">Mensualidad / Vitrina Soberana</p>
+        <a href="https://wa.me/56927541231?text=Hola%20Sol,%20soy%20creador%20y%20quiero%20exponer" class="btn-gold" target="_blank">🎨 Postular para Exponer</a>
       </div>
     </section>
 
-    <!-- DATOS DE TRANSFERENCIA -->
+    <!-- DATOS BANCARIOS -->
     <section class="contacto-section" id="datos-bancarios">
       <h2 class="sec-titulo">Adquisición Segura y Mecenazgo</h2>
-      <p style="color:#CBD5E1; font-size:0.92rem; max-width:650px; margin:0 auto 12px;">
-        Adquiere una acuarela original o apoya el trabajo poético de Enrique Erazo. Envíos asegurados a todo Chile y el extranjero.
-      </p>
-      <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20confirmar%20mi%20adquisicion%20de%20arte" class="btn-gold" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Hablar con Enrique Erazo
-      </a>
-
+      <p style="color:#CBD5E1;font-size:0.92rem;max-width:650px;margin:0 auto 12px;">Envíos asegurados a todo Chile y el extranjero.</p>
+      <a href="https://wa.me/56997292389?text=Hola%20Enrique,%20quiero%20confirmar%20mi%20adquisicion" class="btn-gold" target="_blank"><i class="fa-brands fa-whatsapp"></i> Hablar con Enrique Erazo</a>
       <div class="datos-pago">
-        <h4>🏦 Datos Oficiales para Transferencia Bancaria</h4>
+        <h4 style="color:var(--gold-light);border-bottom:1px solid rgba(212,175,55,0.3);padding-bottom:6px;margin-bottom:10px;">🏦 Datos Oficiales de Transferencia</h4>
         <p><strong>Titular:</strong> Enrique Erazo</p>
         <p><strong>RUT:</strong> 13.920.983-4</p>
         <p><strong>Banco:</strong> Banco de Chile</p>
@@ -469,15 +899,12 @@
 
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D & Ateneo de Letras &bull; Dirección: Sol Sánchez Contreras</p>
-    <p style="margin-top:5px;">Tecnología con alma: <a href="https://terapiasol-ai.github.io/Aurion/" target="_blank">AURION &bull; IA a tu Medida</a></p>
-    
-    <div style="margin-top: 14px; display: flex; justify-content: center; align-items: center;">
-      <div style="display:inline-flex; align-items:center; gap:8px; background:#14110B; padding:5px 14px; border-radius:20px; border:1.5px solid var(--gold); color:var(--gold-light); font-size:0.82rem; font-weight:700;">
+    <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D &bull; Dirección: Sol Sánchez Contreras</p>
+    <div style="margin-top:14px;display:flex;justify-content:center;align-items:center;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#14110B;padding:5px 14px;border-radius:20px;border:1.5px solid var(--gold);color:var(--gold-light);font-size:0.82rem;font-weight:700;">
         <span>👁️ Visitas a la Galería:</span>
-        <span id="contador-numero-fridart" style="background:var(--gold); color:#0A0E14; padding:2px 8px; border-radius:10px; font-size:0.88rem;">25</span>
+        <span id="contador-numero-fridart" style="background:var(--gold);color:#0A0E14;padding:2px 8px;border-radius:10px;">25</span>
       </div>
     </div>
   </footer>
@@ -485,40 +912,26 @@
   <!-- WIDGET ATENEA -->
   <div id="atenea-widget-container">
     <div class="atenea-bubble-btn" onclick="toggleAteneaChat()">
-      <div class="atenea-avatar-pulse">
-        <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Atenea">
-      </div>
-      <div style="text-align:left; line-height:1.2;">
-        <div class="atenea-bubble-title">Atenea • Marchante</div>
-        <div class="atenea-bubble-sub">🟢 Habla o escribe aquí</div>
+      <div class="atenea-avatar-pulse"><img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Atenea"></div>
+      <div style="text-align:left;line-height:1.2;">
+        <div style="color:var(--gold-light);font-size:12.5px;font-weight:700;font-family:'Cinzel',serif;">Atenea • Marchante</div>
+        <div style="color:var(--accent-green);font-size:10.5px;font-weight:600;">🟢 Habla o escribe aquí</div>
       </div>
     </div>
-
     <div id="atenea-chat-window">
       <div class="atenea-chat-header">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" style="width:30px; height:30px; border-radius:50%; border:1.5px solid var(--gold);" alt="Atenea">
-          <div>
-            <div style="color:#FFF; font-weight:700; font-size:12.5px; font-family:'Cinzel', serif;">Atenea Curadora</div>
-            <div style="color:var(--accent-green); font-size:10px;">Marchante de Arte & Poesía</div>
-          </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" style="width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);" alt="Atenea">
+          <div style="color:#FFF;font-weight:700;font-size:12.5px;">Atenea Curadora</div>
         </div>
-        <div style="display:flex; align-items:center;">
-          <button onclick="toggleVoiceAtenea()" id="voiceToggleAtenea" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:15px; margin-right:5px;">🔊</button>
-          <button onclick="toggleAteneaChat()" style="background:none; border:none; color:var(--text-muted); font-size:18px; cursor:pointer;">✕</button>
-        </div>
+        <button onclick="toggleAteneaChat()" style="background:none;border:none;color:#888;font-size:18px;cursor:pointer;">✕</button>
       </div>
-
       <div class="atenea-chat-messages" id="ateneaChatMessages">
-        <div class="msg-atenea">
-          ¡Hola! Soy <strong>Atenea</strong>, curadora de <strong>fridArte</strong>.<br><br>
-          Te invito a recorrer nuestras 17 acuarelas 3D y el <strong>Salón de Poesía Viva</strong> con los 15 poemas de Enrique Ángel Erazo. ¿Hay alguna pintura o poema del que te gustaría conocer su historia y significado?
-        </div>
+        <div class="msg-atenea">¡Hola! Soy <strong>Atenea</strong>, curadora de fridArte. Te invito a recorrer nuestras 17 acuarelas 3D y el Salón de Poesía de Enrique Erazo. ¿Qué obra te gustaría conocer?</div>
       </div>
-
       <div class="atenea-input-box">
-        <button class="atenea-mic-btn" id="ateneaMicBtn" onclick="toggleDictadoAtenea()" title="Hablar por voz">🎙️</button>
-        <input type="text" id="ateneaUserInput" placeholder="Pregúntame por una pintura, un poema o cómo adquirir..." onkeypress="if(event.key==='Enter') enviarMensajeAtenea()">
+        <button class="atenea-mic-btn" id="ateneaMicBtn" onclick="toggleDictadoAtenea()">🎙️</button>
+        <input type="text" id="ateneaUserInput" placeholder="Pregúntame por una obra o poema..." onkeypress="if(event.key==='Enter')enviarMensajeAtenea()">
         <button class="atenea-send-btn" onclick="enviarMensajeAtenea()">➤</button>
       </div>
     </div>
@@ -527,161 +940,74 @@
   <script>
     const base = "https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/";
     const wa = "https://wa.me/56997292389?text=Hola%20Enrique%21%20Me%20interesa%20la%20acuarela%20";
-    const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento%20al%20llevar%202%20obras";
+    const disc = "%20y%20aprovechar%20el%2025%25%20de%20descuento";
 
     function inicializarContadorFridart() {
-      const baseCount = 25;
-      let visitasLocales = parseInt(localStorage.getItem("fridart_visitas_v8") || "0") + 1;
-      localStorage.setItem("fridart_visitas_v8", visitasLocales);
-      const total = baseCount + visitasLocales;
-      const el = document.getElementById("contador-numero-fridart");
-      if (el) el.innerText = total;
+      const b = 25;
+      let v = parseInt(localStorage.getItem("fridart_visitas_final_v1") || "0") + 1;
+      localStorage.setItem("fridart_visitas_final_v1", v);
+      document.getElementById("contador-numero-fridart").innerText = b + v;
     }
     inicializarContadorFridart();
 
-    // 17 ACUARELAS
+    // 17 ACUARELAS CON ARREGLO DE FLOR DE LOTO
     const obras = [
-      {"id":"obra_01","t":"Cielo Nublado","p_promo":"85.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa. La sutileza de los grises y la transparencia del agua transmiten la calma del mar en invierno."},
-      {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"95.000 CLP","p_old":"150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad, fuerza interior y la fluidez orgánica del cuerpo en acuarela."},
-      {"id":"obra_03","t":"Flores de Primavera","p_promo":"65.000 CLP","p_old":"95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela luminosa que retrata flores silvestres en pleno florecimiento, aportando calidez y frescura a cualquier rincón."},
-      {"id":"obra_04","t":"Barco Azul","p_promo":"88.000 CLP","p_old":"135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero tradicional navegando en alta mar rodeado de gaviotas. Un homenaje al trabajo costero y la nobleza del océano."},
-      {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle. Una atmósfera íntima y serena de contemplación."},
-      {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras que realzan la sensualidad, el misterio y la luz del torso."},
-      {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"88.000 CLP","p_old":"130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda con pinceladas sueltas y gran maestría del claroscuro."},
-      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada donde los pigmentos se funden en el agua creando una textura envolvente y poética."},
-      {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"80.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises. Una silueta esbelta que demuestra cómo la simpleza del trazo llena el espacio."},
-      {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"65.000 CLP","p_old":"90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de una flor blanca pura sobre fondo oscuro que resalta la delicadeza y fragilidad de la naturaleza."},
-      {"id":"obra_11","t":"Atardecer Rojo","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres que llenan el ambiente de pasión, calidez y fuerza telúrica."},
-      {"id":"obra_12","t":"Marina Gris","p_promo":"78.000 CLP","p_old":"115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje costero bajo la bruma marina. Una acuarela minimalista con atmósfera melancólica y pacífica."},
-      {"id":"obra_13","t":"Nubes Azules","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas que despiertan la sensación de aire limpio y horizonte abierto."},
-      {"id":"obra_14","t":"Desnudo de Frente","p_promo":"88.000 CLP","p_old":"135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con un tratamiento sutil del color que honra la vulnerabilidad y la presencia del ser."},
-      {"id":"obra_15","t":"Desnudo con Alas","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición alegórica donde la figura humana se funde con formas aladas que sugieren elevación espiritual y vuelo creador."},
-      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260715-WA0044(1).jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas, símbolo de pureza y renacimiento constante."},
-      {"id":"obra_17","t":"Rosas de Rosas","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos tiernos y vivos, un homenaje visual a la maternidad, el afecto y la belleza del jardín."}
+      {"id":"obra_01","t":"Cielo Nublado","p_promo":"85.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa."},
+      {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"95.000 CLP","p_old":"150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad."},
+      {"id":"obra_03","t":"Flores de Primavera","p_promo":"65.000 CLP","p_old":"95.000 CLP","i":base+"IMG-20260715-WA0022.jpg","w":wa+"Flores%20de%20Primavera"+disc,"h":"Acuarela luminosa de flores silvestres en florecimiento."},
+      {"id":"obra_04","t":"Barco Azul","p_promo":"88.000 CLP","p_old":"135.000 CLP","i":base+"IMG-20260715-WA0020.jpg","w":wa+"Barco%20Azul"+disc,"h":"Pesquero navegando en alta mar rodeado de gaviotas."},
+      {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle."},
+      {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras."},
+      {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"88.000 CLP","p_old":"130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda."},
+      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada con texturas envolventes."},
+      {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"80.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises."},
+      {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"65.000 CLP","p_old":"90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de flor blanca pura sobre fondo oscuro."},
+      {"id":"obra_11","t":"Atardecer Rojo","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres."},
+      {"id":"obra_12","t":"Marina Gris","p_promo":"78.000 CLP","p_old":"115.000 CLP","i":base+"IMG-20260715-WA0045.jpg","w":wa+"Marina%20Gris"+disc,"h":"Paisaje costero bajo la bruma marina."},
+      {"id":"obra_13","t":"Nubes Azules","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas."},
+      {"id":"obra_14","t":"Desnudo de Frente","p_promo":"88.000 CLP","p_old":"135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con sutil tratamiento de color."},
+      {"id":"obra_15","t":"Desnudo con Alas","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición donde la figura se funde con formas aladas."},
+      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260715-WA0044%281%29.jpg","alt_i":base+"IMG-20260715-WA0044.jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas."},
+      {"id":"obra_17","t":"Rosas de Rosas","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos vivos y tiernos."}
     ];
 
-    // 15 POEMAS
+    // 15 POEMAS COMPLETOS
     const poemas = [
-      {
-        "t": "Turista del futuro",
-        "c": "El tiempo futuro es hoy\nla distopía paso a ser historia\nhegemonía de una conciencia que gobierna\ndándonos propósito y fin\nhuimos del vértigo de la libertad\nlo dejamos en manos del emperador digital\nnos conoce tanto que uno se desconoce\nlibre albedrío o voluntad son parte del mito\ntodo conocimiento reducido a un bit\ninfinito escondido a la percepción\nel enjambre es un mismo individuo\nnadie agita la colmena solo hacemos miel\nreina que no sabe para quién trabaja\nhumano feliz rebosante de ignorancia\nvolvimos a comer del fruto prohibido\nesta vez del desconocimiento."
-      },
-      {
-        "t": "Retrato en el espejo",
-        "c": "Miro el espejo y no estoy\nVeo al que fue\nojo de cara desnuda en otro\nrostro cómplice fruncido de extrañeza\nOjos arrojados al abismo de memorias\nimposibles de alcanzar\nTiempo del cara a cara."
-      },
-      {
-        "t": "Relaciones Deshabitadas",
-        "c": "Veo gente\ncon brazos que no abrazan\nni manos que toquen\ncorazones wifi\nviudos de otoño sin hojas que contar\nanillos de compromiso\na veneradas redes virtuales\nveo mucha pobreza oculta en sus bolsillos\nde odiseo perdido\ncarroñeros de pasiones putrefactas\návidos de lesa humanidad\nal dejar de mirar,\nmuéstrame el animal social de la jungla digital,\nAristóteles ha muerto...\na manos de su verdugo\nla sociedad imaginaria."
-      },
-      {
-        "t": "¿Pensamos?",
-        "c": "Al habitar la pregunta\nabrimos la pregunta que no cierra\nla respuesta inicia una nueva pregunta.\nPensar lo no resuelto por el lenguaje\npalabra o significado\nModificado por un uso imperfecto\nEl pensar se asoma en su gestación\nEn ausencia de palabras\nTras los susurros del silencio.\nMientras escribo, siento que pienso\nSobretodo cuando no escribo\nsensación sutil así como efímera.\nSí! eso es, sensación de apertura\nHonesta, libre sin pretensiones\nAjena a la expectativa\nLugar donde el Ser despliega su idioma."
-      },
-      {
-        "t": "Paseos con muertos",
-        "c": "El otro día fui de shopping con sor Teresa de Calcuta,\n¿Por qué tanta oferta?\nacaso todo perdió valor\ndónde se fue mi Dios\nel perro perdió el collar\n¿quién se ha llevado su hueso?\nsor Teresa, reza y pide...\nsi hay Dios que ponga orden,\neste reality se fue a las pailas\nRating en lugar de valores\nFamilias plásticas con devolución\ny garantía extendida.\nLe sugiero mi \"sor\" vuelva a su mausoleo,\nDisculpe usted por mall-estar."
-      },
-      {
-        "t": "¿Soy o estoy?",
-        "c": "hoy quiero escucharme\nme cansé de ignorarme\nextraño los diálogos conmigo\nrelatos que otorgan esencia\nno solo presencia para el otro\nhabitar el espacio intransitado\ndonde no se puede ir de la mano\nepicentro de emociones que atraviesan\nemergen de pensamientos bucle\npor eso las vueltas son las que dejan\nespecialmente hacia el gran ausente\nuno mismo."
-      },
-      {
-        "t": "Duelo de desamor",
-        "c": "tus palabras son duras\ncomo el pan olvidado\npero más insondable es tu silencio\nabismo de un corazón fatigado\nduele el recuerdo\nde lo que nunca fue\nno entendí tanto tempano\nni un poco de rencor fue digno\ndónde hubo fuego\noxígeno tenía el corazón."
-      },
-      {
-        "t": "Costos de vida modernos",
-        "c": "Plataformas de consumo\ncínico e hipócrito contenido\nhoy desperté en rebeldía\nno elijan mi comida\nmúsica o que me pongo\nmucho menos de quien me enamoro\ncomo se les ocurre utilizarnos de mercancía\nhurtaron la atención del metro cuadrado\nembutido de libre albedrío\nque torpeza dejarnos adular\nse logró hacernos dejar de pensar\nhoy te miro de frente despierto y listo\nes tan fácil anular el poder\nde digital a análogo un solo paso\npero la cobardía disfrazada de comodidad\natrofia la voluntad personal\nconvirtiéndonos en ganado bovino."
-      },
-      {
-        "t": "Diálogos conmigo mismo",
-        "c": "Te habla tu Daimon\nrelacionador público\nentre tu yo y mi existencia\nrepresentando la tensión inherente\nal diálogo sin sonido\nde escucha abierta\nen el silencio más ruidoso\ninterior palpitante\nignorado por el bullicio\nque distrae los sentidos\nescucha lo que te digo pon atención\naprovecha este momento de lucidez\nquédate con esa sensación\nsiempre estoy aquí aunque no creas...\nlo estoy."
-      },
-      {
-        "t": "Les presento al Aire",
-        "c": "Si fuera dios sería el aire\npara inhalar almas rotas\ninspirar al sediento\ninsuflar al desfallecido\nexhalar al destierro\naspirar virtud\nimpulsar bocanadas de amabilidad\nsoplar el polvo de los corazones\nlevantar huracanes al olvido\nrespirar aliento de ángel\nhumores de humanidad bestial\nsin fe en una deidad tan real."
-      },
-      {
-        "t": "Sala de espera",
-        "c": "Hay lugares sin esperanza\nSitios blancos enmudecidos\nSeñalética invisible\nAsientos vacíos de conciencia\nLuces sin sol ni luna\nTiempos de vacío\nCámaras ausentes saturando tímpanos\nsirenas embrujan con encanto,\noídos sordos que no ven\nojos ciegos que no escuchan\ncomo los pacientes,\nPacientes de antesala\nA la espera...\nIneludible para todos."
-      },
-      {
-        "t": "Y ese ... Quién es ?",
-        "c": "Quién es ese Enrique?\nnominalismo del cuerpo\nque quisieron mis padres.\nrostro dibujado de dios que no me habla.\nanimal social domesticado\npor una realidad agobiante.\n¿Puedo salir de este nombre?\nsi el destino quiere liberarme tal vez sea privilegio\n¿Quién eres?\ncuerpo hecho verbo\npotencial en acto\no un proyecto inacabado que la vida oculta\npara animar huesos y alegrar ánimos.\nsi el precio de encontrarte fuera perderte,\na quien le importaría,\ndemasiado humano...\ny tan poco ser."
-      },
-      {
-        "t": "Puerto chubascos",
-        "c": "Saboreo aire húmedo\nOlfateo invierno piel\nMurmullo de paso gris\nSemblantes de ropa empapada\nSemáforos verdes sabores\nPavimentos sinuosos agitados\nviejos sin tiempo\nvientos de latas derramando lágrimas\npeatón errante de lenguaje ambiguo\nlos que se detienen\nLeen el movimiento\nY escuchan blanco el silencio."
-      },
-      {
-        "t": "Poemas fallidos",
-        "c": "Ese...tíralo a la basura\nnadie lo va a extrañar\ncuántos intentos sin compaginar\nescribo por lo que no fue\nrecito su nombre hablante\nhuelo sus pasos\ndesdescuidada arritmia que navega honda\nreconstruyo intentos de candidez\nPluma que registra mi voz,\nAnónima al fondo del cesto."
-      },
-      {
-        "t": "Consciencia de un Yo",
-        "c": "Todos los caminos me llevan a casa\nturista del cuerpo fugitivo del alma\nsenderos que bifurcan el sentido\nme busco en este aparecer\nno hay cabida a la elección\ndimensión colapsada de átomos\ncolisión de fuerzas invisibles percibidas\npor no sé quién ni de dónde."
-      }
+      {"t":"Turista del futuro","c":"El tiempo futuro es hoy\nla distopía paso a ser historia\nhegemonía de una conciencia que gobierna\ndándonos propósito y fin\nhuimos del vértigo de la libertad\nlo dejamos en manos del emperador digital\nnos conoce tanto que uno se desconoce\nlibre albedrío o voluntad son parte del mito\ntodo conocimiento reducido a un bit\ninfinito escondido a la percepción\nel enjambre es un mismo individuo\nnadie agita la colmena solo hacemos miel\nreina que no sabe para quién trabaja\nhumano feliz rebosante de ignorancia\nvolvimos a comer del fruto prohibido\nesta vez del desconocimiento."},
+      {"t":"Retrato en el espejo","c":"Miro el espejo y no estoy\nVeo al que fue\nojo de cara desnuda en otro\nrostro cómplice fruncido de extrañeza\nOjos arrojados al abismo de memorias\nimposibles de alcanzar\nTiempo del cara a cara."},
+      {"t":"Relaciones Deshabitadas","c":"Veo gente\ncon brazos que no abrazan\nni manos que toquen\ncorazones wifi\nviudos de otoño sin hojas que contar\nanillos de compromiso\na veneradas redes virtuales\nveo mucha pobreza oculta en sus bolsillos\nde odiseo perdido\ncarroñeros de pasiones putrefactas\návidos de lesa humanidad\nal dejar de mirar,\nmuéstrame el animal social de la jungla digital,\nAristóteles ha muerto...\na manos de su verdugo\nla sociedad imaginaria."},
+      {"t":"¿Pensamos?","c":"Al habitar la pregunta\nabrimos la pregunta que no cierra\nla respuesta inicia una nueva pregunta.\nPensar lo no resuelto por el lenguaje\npalabra o significado\nModificado por un uso imperfecto\nEl pensar se asoma en su gestación\nEn ausencia de palabras\nTras los susurros del silencio.\nMientras escribo, siento que pienso\nSobretodo cuando no escribo\nsensación sutil así como efímera.\nSí! eso es, sensación de apertura\nHonesta, libre sin pretensiones\nAjena a la expectativa\nLugar donde el Ser despliega su idioma."},
+      {"t":"Paseos con muertos","c":"El otro día fui de shopping con sor Teresa de Calcuta,\n¿Por qué tanta oferta?\nacaso todo perdió valor\ndónde se fue mi Dios\nel perro perdió el collar\n¿quién se ha llevado su hueso?\nsor Teresa, reza y pide...\nsi hay Dios que ponga orden,\neste reality se fue a las pailas\nRating en lugar de valores\nFamilias plásticas con devolución\ny garantía extendida.\nLe sugiero mi \"sor\" vuelva a su mausoleo,\nDisculpe usted por mall-estar."},
+      {"t":"¿Soy o estoy?","c":"hoy quiero escucharme\nme cansé de ignorarme\nextraño los diálogos conmigo\nrelatos que otorgan esencia\nno solo presencia para el otro\nhabitar el espacio intransitado\ndonde no se puede ir de la mano\nepicentro de emociones que atraviesan\nemergen de pensamientos bucle\npor eso las vueltas son las que dejan\nespecialmente hacia el gran ausente\nuno mismo."},
+      {"t":"Duelo de desamor","c":"tus palabras son duras\ncomo el pan olvidado\npero más insondable es tu silencio\nabismo de un corazón fatigado\nduele el recuerdo\nde lo que nunca fue\nno entendí tanto tempano\nni un poco de rencor fue digno\ndónde hubo fuego\noxígeno tenía el corazón."},
+      {"t":"Costos de vida modernos","c":"Plataformas de consumo\ncínico e hipócrito contenido\nhoy desperté en rebeldía\nno elijan mi comida\nmúsica o que me pongo\nmucho menos de quien me enamoro\ncomo se les ocurre utilizarnos de mercancía\nhurtaron la atención del metro cuadrado\nembutido de libre albedrío\nque torpeza dejarnos adular\nse logró hacernos dejar de pensar\nhoy te miro de frente despierto y listo\nes tan fácil anular el poder\nde digital a análogo un solo paso\npero la cobardía disfrazada de comodidad\natrofia la voluntad personal\nconvirtiéndonos en ganado bovino."},
+      {"t":"Diálogos conmigo mismo","c":"Te habla tu Daimon\nrelacionador público\nentre tu yo y mi existencia\nrepresentando la tensión inherente\nal diálogo sin sonido\nde escucha abierta\nen el silencio más ruidoso\ninterior palpitante\nignorado por el bullicio\nque distrae los sentidos\nescucha lo que te digo pon atención\naprovecha este momento de lucidez\nquédate con esa sensación\nsiempre estoy aquí aunque no creas...\nlo estoy."},
+      {"t":"Les presento al Aire","c":"Si fuera dios sería el aire\npara inhalar almas rotas\ninspirar al sediento\ninsuflar al desfallecido\nexhalar al destierro\naspirar virtud\nimpulsar bocanadas de amabilidad\nsoplar el polvo de los corazones\nlevantar huracanes al olvido\nrespirar aliento de ángel\nhumores de humanidad bestial\nsin fe en una deidad tan real."},
+      {"t":"Sala de espera","c":"Hay lugares sin esperanza\nSitios blancos enmudecidos\nSeñalética invisible\nAsientos vacíos de conciencia\nLuces sin sol ni luna\nTiempos de vacío\nCámaras ausentes saturando tímpanos\nsirenas embrujan con encanto,\noídos sordos que no ven\nojos ciegos que no escuchan\ncomo los pacientes,\nPacientes de antesala\nA la espera...\nIneludible para todos."},
+      {"t":"Y ese ... Quién es ?","c":"Quién es ese Enrique?\nnominalismo del cuerpo\nque quisieron mis padres.\nrostro dibujado de dios que no me habla.\nanimal social domesticado\npor una realidad agobiante.\n¿Puedo salir de este nombre?\nsi el destino quiere liberarme tal vez sea privilegio\n¿Quién eres?\ncuerpo hecho verbo\npotencial en acto\no un proyecto inacabado que la vida oculta\npara animar huesos y alegrar ánimos.\nsi el precio de encontrarte fuera perderte,\na quien le importaría,\ndemasiado humano...\ny tan poco ser."},
+      {"t":"Puerto chubascos","c":"Saboreo aire húmedo\nOlfateo invierno piel\nMurmullo de paso gris\nSemblantes de ropa empapada\nSemáforos verdes sabores\nPavimentos sinuosos agitados\nviejos sin tiempo\nvientos de latas derramando lágrimas\npeatón errante de lenguaje ambiguo\nlos que se detienen\nLeen el movimiento\nY escuchan blanco el silencio."},
+      {"t":"Poemas fallidos","c":"Ese...tíralo a la basura\nnadie lo va a extrañar\ncuántos intentos sin compaginar\nescribo por lo que no fue\nrecito su nombre hablante\nhuelo sus pasos\ndesdescuidada arritmia que navega honda\nreconstruyo intentos de candidez\nPluma que registra mi voz,\nAnónima al fondo del cesto."},
+      {"t":"Consciencia de un Yo","c":"Todos los caminos me llevan a casa\nturista del cuerpo fugitivo del alma\nsenderos que bifurcan el sentido\nme busco en este aparecer\nno hay cabida a la elección\ndimensión colapsada de átomos\ncolisión de fuerzas invisibles percibidas\npor no sé quién ni de dónde."}
     ];
 
     let indexActual = 0;
     let indexPoemaActual = 0;
-    let voces = [];
-    let vozAteneaActiva = true;
-    let recognitionAtenea = null;
-    let escuchandoAtenea = false;
-
     let mediaRecorder;
     let audioChunks = [];
-    let audioBlob = null;
-
-    function cargarVoces() {
-      if ('speechSynthesis' in window) {
-        voces = window.speechSynthesis.getVoices();
-      }
-    }
-    if ('speechSynthesis' in window) {
-      cargarVoces();
-      window.speechSynthesis.onvoiceschanged = cargarVoces;
-    }
-
-    function prepararTextoVoz(texto) {
-      return texto
-        .replace(/https?:\/\/\S+/g, "")
-        .replace(/[*#_~`]/g, "")
-        .replace(/\$\s*(\d+[\d\.]*)\s*(CLP|pesos chilenos|pesos)?/gi, "$1 pesos chilenos")
-        .replace(/\$/g, "")
-        .replace(/\bfridArt\b/gi, "Fridarte")
-        .replace(/\bfridArte\b/gi, "Fridarte")
-        .replace(/\bCLP\b/gi, "pesos chilenos")
-        .replace(/\b300g\b/gi, "trescientos gramos");
-    }
 
     function actualizarSala3D() {
-      const obra = obras[indexActual];
-      const imgEl = document.getElementById("current-art-img");
-      const titleEl = document.getElementById("current-art-title");
-      const speechEl = document.getElementById("current-art-speech");
-      const priceEl = document.getElementById("current-art-price");
-      const waEl = document.getElementById("current-art-wa");
-      const frameContainer = document.getElementById("frame-container");
-
-      frameContainer.style.transform = "scale(0.95) rotateY(6deg)";
-      setTimeout(() => {
-        imgEl.src = obra.i;
-        imgEl.onerror = function() {
-          if (obra.alt_i && this.src !== obra.alt_i) this.src = obra.alt_i;
-        };
-        titleEl.innerText = `Obra ${indexActual + 1} de ${obras.length}: ${obra.t}`;
-        speechEl.innerText = `"${obra.h}"`;
-        priceEl.innerHTML = `${obra.p_promo} <span style="text-decoration:line-through; font-size:0.82rem; color:#888;">(Antes ${obra.p_old})</span>`;
-        waEl.href = obra.w;
-        frameContainer.style.transform = "scale(1) rotateY(0deg)";
-      }, 200);
+      const o = obras[indexActual];
+      const img = document.getElementById("current-art-img");
+      img.src = o.i;
+      img.onerror = function(){ if(o.alt_i && this.src!==o.alt_i) this.src=o.alt_i; };
+      document.getElementById("current-art-title").innerText = `Obra ${indexActual + 1} de 17: ${o.t}`;
+      document.getElementById("current-art-speech").innerText = `"${o.h}"`;
+      document.getElementById("current-art-price").innerText = `${o.p_promo} (Antes ${o.p_old})`;
+      document.getElementById("current-art-wa").href = o.w;
     }
 
-    function navegarObra(delta) {
-      indexActual += delta;
+    function navegarObra(d) {
+      indexActual += d;
       if (indexActual < 0) indexActual = obras.length - 1;
       if (indexActual >= obras.length) indexActual = 0;
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
@@ -689,55 +1015,29 @@
     }
 
     function escucharCuradora() {
-      if (!vozAteneaActiva || !('speechSynthesis' in window)) return;
+      if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
-      const obra = obras[indexActual];
-      const texto = `Obra ${indexActual + 1}: ${obra.t}. ${obra.h}. Esta acuarela original de Enrique Erazo está disponible en promoción por ${obra.p_promo.replace("CLP", "pesos chilenos")}.`;
-      hablarAtenea(texto);
+      const o = obras[indexActual];
+      const t = `Obra ${indexActual + 1}: ${o.t}. ${o.h}. Esta acuarela original de Enrique Erazo está disponible en promoción por ${o.p_promo.replace("CLP", "pesos chilenos")}.`;
+      const u = new SpeechSynthesisUtterance(t.replace(/\$/g,"").replace(/CLP/g,"pesos chilenos"));
+      u.lang = "es-CL";
+      window.speechSynthesis.speak(u);
     }
 
-    function hablarAtenea(texto) {
-      if (!vozAteneaActiva || !('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      
-      const utter = new SpeechSynthesisUtterance(prepararTextoVoz(texto));
-      if (voces.length === 0) cargarVoces();
-      const vozFemenina = voces.find(v => (v.lang.startsWith("es") || v.lang.includes("ES") || v.lang.includes("MX") || v.lang.includes("CL")) && (v.name.includes("Google") || v.name.includes("Sabina") || v.name.includes("Paulina") || v.name.includes("Elena") || v.name.includes("Dalia") || v.name.includes("Natural"))) || voces.find(v => v.lang.startsWith("es"));
-      
-      if (vozFemenina) utter.voice = vozFemenina;
-      utter.lang = "es-CL";
-      utter.rate = 0.92;
-      utter.pitch = 1.0;
-      window.speechSynthesis.speak(utter);
-    }
-
-    // SALÓN DE POESÍA
     function renderizarPoemas() {
-      const container = document.getElementById("poemTabsContainer");
-      container.innerHTML = "";
-      
+      const c = document.getElementById("poemTabsContainer");
+      c.innerHTML = "";
       poemas.forEach((p, idx) => {
-        const btn = document.createElement("button");
-        btn.className = `btn-poem-tab ${idx === indexPoemaActual ? 'active' : ''}`;
-        btn.innerText = `${idx + 1}. ${p.t}`;
-        btn.onclick = () => seleccionarPoema(idx);
-        container.appendChild(btn);
+        const b = document.createElement("button");
+        b.className = `btn-poem-tab ${idx === indexPoemaActual ? 'active' : ''}`;
+        b.innerText = `${idx + 1}. ${p.t}`;
+        b.onclick = () => {
+          indexPoemaActual = idx;
+          document.querySelectorAll(".btn-poem-tab").forEach((t, i) => t.classList.toggle("active", i === idx));
+          mostrarPoema();
+        };
+        c.appendChild(b);
       });
-
-      mostrarPoema();
-    }
-
-    function seleccionarPoema(idx) {
-      indexPoemaActual = idx;
-      const tabs = document.querySelectorAll(".btn-poem-tab");
-      tabs.forEach((t, i) => {
-        if (i === idx) t.classList.add("active");
-        else t.classList.remove("active");
-      });
-
-      document.getElementById("audioPlaybackWeb").style.display = "none";
-      document.getElementById("btnDownloadAudio").style.display = "none";
-
       mostrarPoema();
     }
 
@@ -745,192 +1045,116 @@
       const p = poemas[indexPoemaActual];
       document.getElementById("displayPoemTitle").innerText = p.t;
       document.getElementById("displayPoemBody").innerText = p.c;
+      document.getElementById("audioPlaybackWeb").style.display = "none";
+      document.getElementById("btnDownloadAudio").style.display = "none";
     }
 
-    // GRABADORA WEB
     async function iniciarGrabacionPoema() {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         mediaRecorder = new MediaRecorder(stream);
         audioChunks = [];
-
-        mediaRecorder.ondataavailable = event => {
-          if (event.data.size > 0) audioChunks.push(event.data);
-        };
-
+        mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
         mediaRecorder.onstop = () => {
-          audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-          const audioUrl = URL.createObjectURL(audioBlob);
-          const audioPlayer = document.getElementById("audioPlaybackWeb");
-          audioPlayer.src = audioUrl;
-          audioPlayer.style.display = "block";
-
-          const downloadBtn = document.getElementById("btnDownloadAudio");
-          downloadBtn.href = audioUrl;
-          const nombreArchivo = `poema_${indexPoemaActual + 1}_${poemas[indexPoemaActual].t.replace(/\s+/g, '_')}.webm`;
-          downloadBtn.download = nombreArchivo;
-          downloadBtn.style.display = "inline-flex";
+          const blob = new Blob(audioChunks, { type: 'audio/webm' });
+          const url = URL.createObjectURL(blob);
+          const p = document.getElementById("audioPlaybackWeb");
+          p.src = url;
+          p.style.display = "block";
+          const d = document.getElementById("btnDownloadAudio");
+          d.href = url;
+          d.download = `poema_${indexPoemaActual + 1}.webm`;
+          d.style.display = "inline-flex";
         };
-
         mediaRecorder.start();
-        const btnRec = document.getElementById("btnStartRec");
-        btnRec.innerHTML = '<i class="fa-solid fa-microphone"></i> Grabando...';
+        document.getElementById("btnStartRec").innerHTML = '<i class="fa-solid fa-microphone"></i> Grabando...';
         document.getElementById("btnStopRec").style.display = "inline-flex";
-
       } catch (err) {
-        alert("Para grabar tu voz, permite el acceso al micrófono en tu navegador.");
+        alert("Permite el acceso al micrófono para grabar.");
       }
     }
 
     function detenerGrabacionPoema() {
       if (mediaRecorder && mediaRecorder.state !== "inactive") {
         mediaRecorder.stop();
-        const btnRec = document.getElementById("btnStartRec");
-        btnRec.innerHTML = '<i class="fa-solid fa-circle"></i> Volver a Grabar';
+        document.getElementById("btnStartRec").innerHTML = '<i class="fa-solid fa-circle"></i> Volver a Grabar';
         document.getElementById("btnStopRec").style.display = "none";
       }
     }
 
     // GRILLA ACUARELAS
-    const containerGrid = document.getElementById('galeria-grid');
+    const cg = document.getElementById('galeria-grid');
     obras.forEach((o, idx) => {
-      const card = document.createElement('div');
-      card.className = 'obra-card';
-      card.innerHTML = `
-        <div class="obra-img-box">
-          <img src="${o.i}" alt="${o.t}" loading="lazy" onerror="if(this.src!=='${o.alt_i||""}')this.src='${o.alt_i||""}';">
-        </div>
+      const c = document.createElement('div');
+      c.className = 'obra-card';
+      c.innerHTML = `
+        <div class="obra-img-box"><img src="${o.i}" alt="${o.t}" loading="lazy" onerror="if(o.alt_i&&this.src!==o.alt_i)this.src=o.alt_i;"></div>
         <div class="obra-info">
+          <div><h3>${o.t}</h3><p class="historia">${o.h}</p></div>
           <div>
-            <h3>${o.t}</h3>
-            <p class="tecnica">Acuarela original sobre papel de algodón 300g</p>
-            <p class="historia">${o.h}</p>
-          </div>
-          <div>
-            <div class="price-box">
-              <span class="price-promo">${o.p_promo}</span>
-              <span class="price-old">${o.p_old}</span>
-            </div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
-              <button onclick="irASala3D(${idx})" class="btn-gold" style="padding:7px 5px; font-size:0.75rem; justify-content:center;">
-                🏛️ Ver en Sala 3D
-              </button>
-              <a href="${o.w}" target="_blank" class="btn-obra-ws">
-                <i class="fa-brands fa-whatsapp"></i> Comprar
-              </a>
+            <div class="price-box"><span class="price-promo">${o.p_promo}</span><span class="price-old">${o.p_old}</span></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+              <button onclick="irASala3D(${idx})" class="btn-gold" style="padding:7px;font-size:0.75rem;justify-content:center;">🏛️ Ver en 3D</button>
+              <a href="${o.w}" target="_blank" class="btn-obra-ws"><i class="fa-brands fa-whatsapp"></i> Comprar</a>
             </div>
           </div>
         </div>
       `;
-      containerGrid.appendChild(card);
+      cg.appendChild(c);
     });
 
     function irASala3D(idx) {
       indexActual = idx;
       actualizarSala3D();
       document.getElementById('sala-3d').scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => { escucharCuradora(); }, 600);
     }
 
-    // WIDGET
     function toggleAteneaChat() {
-      const win = document.getElementById("atenea-chat-window");
-      win.style.display = (win.style.display === "flex") ? "none" : "flex";
-    }
-
-    function toggleVoiceAtenea() {
-      vozAteneaActiva = !vozAteneaActiva;
-      document.getElementById("voiceToggleAtenea").innerText = vozAteneaActiva ? "🔊" : "🔇";
-      if (!vozAteneaActiva && 'speechSynthesis' in window) window.speechSynthesis.cancel();
-    }
-
-    const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (SpeechRec) {
-      recognitionAtenea = new SpeechRec();
-      recognitionAtenea.lang = 'es-CL';
-      recognitionAtenea.continuous = false;
-      recognitionAtenea.interimResults = false;
-
-      recognitionAtenea.onstart = function() {
-        escuchandoAtenea = true;
-        const btn = document.getElementById("ateneaMicBtn");
-        if (btn) btn.style.background = "#DC2626";
-      };
-
-      recognitionAtenea.onresult = function(e) {
-        if (e.results && e.results[0]) {
-          document.getElementById("ateneaUserInput").value = e.results[0][0].transcript;
-          setTimeout(() => { enviarMensajeAtenea(); }, 350);
-        }
-      };
-
-      recognitionAtenea.onerror = function() { pararMicAtenea(); };
-      recognitionAtenea.onend = function() { pararMicAtenea(); };
+      const w = document.getElementById("atenea-chat-window");
+      w.style.display = w.style.display === "flex" ? "none" : "flex";
     }
 
     function toggleDictadoAtenea() {
-      if (!recognitionAtenea) return;
-      if (escuchandoAtenea) {
-        recognitionAtenea.stop();
-      } else {
-        document.getElementById("ateneaUserInput").value = "";
-        recognitionAtenea.start();
-      }
-    }
-
-    function pararMicAtenea() {
-      escuchandoAtenea = false;
-      const btn = document.getElementById("ateneaMicBtn");
-      if (btn) btn.style.background = "var(--gold)";
-    }
-
-    function responderCuradoraAtenea(mensajeUsuario) {
-      const msg = mensajeUsuario.toLowerCase();
-
-      if (msg.includes("poema") || msg.includes("poesía") || msg.includes("escrito") || msg.includes("letra") || msg.includes("libro") || msg.includes("poemario")) {
-        document.getElementById('salon-letras').scrollIntoView({ behavior: 'smooth' });
-        return "Te invito a conocer el Salón de Poesía Viva. Los 15 poemas de Enrique Ángel Erazo exploran la lucidez y el despertar con una fuerza conmovedora. Puedes adquirir su poemario digital oficial por quince mil pesos chilenos transfiriendo directamente a su cuenta bancaria o por WhatsApp.";
-      }
-
-      if (msg.includes("comprar") || msg.includes("transferir") || msg.includes("pagar") || msg.includes("banco") || msg.includes("datos")) {
-        document.getElementById('datos-bancarios').scrollIntoView({ behavior: 'smooth' });
-        return "Para asegurar tu acuarela original o adquirir el poemario digital de Enrique, puedes transferir directamente a los datos oficiales de Banco de Chile que te muestro en pantalla y enviar el comprobante a su WhatsApp para coordinar.";
-      }
-
-      const obraEncontrada = obras.find(o => msg.includes(o.t.toLowerCase()) || msg.includes(o.id));
-      if (obraEncontrada) {
-        return `'${obraEncontrada.t}' es una pieza original sobre papel de trescientos gramos. Su valor promocional es de ${obraEncontrada.p_promo.replace("CLP", "pesos chilenos")}. Al ser una pieza única e irrepetible, te sugiero reservarla de inmediato por WhatsApp.`;
-      }
-
-      return "En fridArte el arte visual y la poesía se funden en una experiencia patrimonial única. Cuéntame si te gustaría adquirir una acuarela original o el poemario digital de Enrique.";
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) return;
+      const rec = new SpeechRec();
+      rec.lang = 'es-CL';
+      rec.start();
+      rec.onresult = e => {
+        document.getElementById("ateneaUserInput").value = e.results[0][0].transcript;
+        setTimeout(enviarMensajeAtenea, 300);
+      };
     }
 
     function enviarMensajeAtenea() {
-      const input = document.getElementById("ateneaUserInput");
-      const texto = input.value.trim();
-      if (!texto) return;
-
+      const inp = document.getElementById("ateneaUserInput");
+      const txt = inp.value.trim();
+      if (!txt) return;
       const chat = document.getElementById("ateneaChatMessages");
-      const userDiv = document.createElement("div");
-      userDiv.className = "msg-user-art";
-      userDiv.innerText = texto;
-      chat.appendChild(userDiv);
-      input.value = "";
+      chat.innerHTML += `<div class="msg-user-art">${txt}</div>`;
+      inp.value = "";
       chat.scrollTop = chat.scrollHeight;
 
       setTimeout(() => {
-        const respuestaAtenea = responderCuradoraAtenea(texto);
-        const ateneaDiv = document.createElement("div");
-        ateneaDiv.className = "msg-atenea";
-        ateneaDiv.innerHTML = respuestaAtenea;
-        chat.appendChild(ateneaDiv);
+        let r = "Te invito a recorrer nuestras 17 acuarelas 3D y los 15 poemas de Enrique Erazo. Puedes adquirir las obras o su poemario digital por WhatsApp o transferencia.";
+        if (txt.toLowerCase().includes("poema") || txt.toLowerCase().includes("libro")) {
+          document.getElementById('salon-letras').scrollIntoView({ behavior: 'smooth' });
+          r = "Los 15 poemas de Enrique Ángel Erazo exploran la lucidez y el despertar. Puedes adquirir su poemario digital oficial por quince mil pesos chilenos.";
+        } else if (txt.toLowerCase().includes("comprar") || txt.toLowerCase().includes("banco")) {
+          document.getElementById('datos-bancarios').scrollIntoView({ behavior: 'smooth' });
+          r = "Para asegurar tu acuarela original o el poemario digital, puedes transferir a los datos oficiales de Banco de Chile que te muestro en pantalla.";
+        }
+        chat.innerHTML += `<div class="msg-atenea">${r}</div>`;
         chat.scrollTop = chat.scrollHeight;
-
-        hablarAtenea(respuestaAtenea);
-      }, 350);
+        if ('speechSynthesis' in window) {
+          const u = new SpeechSynthesisUtterance(r.replace(/\$/g,"").replace(/CLP/g,"pesos chilenos"));
+          u.lang = "es-CL";
+          window.speechSynthesis.speak(u);
+        }
+      }, 400);
     }
 
-    // Iniciar
+    document.addEventListener('contextmenu', e => e.preventDefault());
     actualizarSala3D();
     renderizarPoemas();
   </script>
