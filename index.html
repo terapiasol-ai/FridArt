@@ -18,7 +18,7 @@
       --accent-purple: #A78BFA;
     }
 
-    /* BLINDAJE ANTI-COPIA */
+    /* BLINDAJE ANTI-COPIA GLOBAL */
     * { 
       margin: 0; 
       padding: 0; 
@@ -50,7 +50,6 @@
       font-family: 'Poppins', sans-serif; 
     }
 
-    /* CABECERA MUSEO */
     header {
       background: radial-gradient(circle at 50% 20%, #1F1708 0%, var(--bg-dark) 90%);
       padding: 40px 15px 30px;
@@ -772,7 +771,6 @@
 </head>
 <body>
 
-  <!-- CABECERA -->
   <header>
     <img src="https://raw.githubusercontent.com/terapiasol-ai/FridArt/main/image%20(5).jpg" alt="Logo fridArte" class="logo-hero">
     <h1>fridArte</h1>
@@ -815,7 +813,7 @@
             </div>
           </div>
           <p class="curator-text" id="current-art-speech">"Inmensidad del cielo cargado de nubes sobre la costa..."</p>
-          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap:8px;">
             <div id="current-art-price" style="color:var(--gold-light);font-weight:800;font-size:1.05rem;">85.000 pesos chilenos</div>
             <a id="current-art-wa" href="#" target="_blank" class="btn-gold" style="padding:6px 14px;font-size:0.78rem;"><i class="fa-brands fa-whatsapp"></i> Adquirir esta Obra</a>
           </div>
@@ -900,7 +898,7 @@
   </div>
 
   <footer>
-    <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D &bull; Dirección: Sol Sánchez Contreras</p>
+    <p>fridArte &copy; 2026 | Galería de Arte Virtual 3D & Ateneo de Letras &bull; Dirección: Sol Sánchez Contreras</p>
     <div style="margin-top:14px;display:flex;justify-content:center;align-items:center;">
       <div style="display:inline-flex;align-items:center;gap:8px;background:#14110B;padding:5px 14px;border-radius:20px;border:1.5px solid var(--gold);color:var(--gold-light);font-size:0.82rem;font-weight:700;">
         <span>👁️ Visitas a la Galería:</span>
@@ -950,7 +948,7 @@
     }
     inicializarContadorFridart();
 
-    // 17 ACUARELAS CON ARREGLO DE FLOR DE LOTO
+    // 17 ACUARELAS CON ENLACE EXACTO DE FLOR DE LOTO CORREGIDO
     const obras = [
       {"id":"obra_01","t":"Cielo Nublado","p_promo":"85.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0021.jpg","w":wa+"Cielo%20Nublado"+disc,"h":"Inmensidad del cielo cargado de nubes sobre la costa."},
       {"id":"obra_02","t":"Desnudo con Brazos Arriba","p_promo":"95.000 CLP","p_old":"150.000 CLP","i":base+"IMG-20260715-WA0023.jpg","w":wa+"Desnudo%20con%20Brazos%20Arriba"+disc,"h":"Silueta humana con brazos levantados que evoca libertad."},
@@ -959,7 +957,7 @@
       {"id":"obra_05","t":"Muelle al Atardecer","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0024.jpg","w":wa+"Muelle%20al%20Atardecer"+disc,"h":"Reflejos dorados del ocaso sobre las maderas del muelle."},
       {"id":"obra_06","t":"Desnudo Fondo Morado","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0026.jpg","w":wa+"Desnudo%20Fondo%20Morado"+disc,"h":"Estudio de figura humana enmarcado en matices púrpuras."},
       {"id":"obra_07","t":"Desnudo Torso Espaldas","p_promo":"88.000 CLP","p_old":"130.000 CLP","i":base+"IMG-20260715-WA0029.jpg","w":wa+"Desnudo%20Torso%20Espaldas"+disc,"h":"Estudio anatómico centrado en la curvatura de la espalda."},
-      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","alt_i":base+"IMG-20260715-WA0028(1).jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada con texturas envolventes."},
+      {"id":"obra_08","t":"Desnudo Acostado","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0040.jpg","w":wa+"Desnudo%20Acostado"+disc,"h":"Figura femenina recostada con texturas envolventes."},
       {"id":"obra_09","t":"Desnudo Monocromo de Pie","p_promo":"80.000 CLP","p_old":"120.000 CLP","i":base+"IMG-20260715-WA0032.jpg","w":wa+"Desnudo%20Monocromo%20de%20Pie"+disc,"h":"Elegancia pura en tonos negros y grises."},
       {"id":"obra_10","t":"Flor Blanca Solitaria","p_promo":"65.000 CLP","p_old":"90.000 CLP","i":base+"IMG-20260715-WA0041.jpg","w":wa+"Flor%20Blanca%20Solitaria"+disc,"h":"Estudio botánico de flor blanca pura sobre fondo oscuro."},
       {"id":"obra_11","t":"Atardecer Rojo","p_promo":"85.000 CLP","p_old":"125.000 CLP","i":base+"IMG-20260715-WA0039.jpg","w":wa+"Atardecer%20Rojo"+disc,"h":"Puesta de sol con intensos matices carmesí y ocres."},
@@ -967,7 +965,7 @@
       {"id":"obra_13","t":"Nubes Azules","p_promo":"75.000 CLP","p_old":"110.000 CLP","i":base+"IMG-20260715-WA0042.jpg","w":wa+"Nubes%20Azules"+disc,"h":"Estudio de texturas celestes y nubes vaporosas."},
       {"id":"obra_14","t":"Desnudo de Frente","p_promo":"88.000 CLP","p_old":"135.000 CLP","i":base+"IMG-20260715-WA0037.jpg","w":wa+"Desnudo%20de%20Frente"+disc,"h":"Silueta humana sentada de frente con sutil tratamiento de color."},
       {"id":"obra_15","t":"Desnudo con Alas","p_promo":"90.000 CLP","p_old":"140.000 CLP","i":base+"IMG-20260715-WA0038.jpg","w":wa+"Desnudo%20con%20Alas"+disc,"h":"Composición donde la figura se funde con formas aladas."},
-      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260715-WA0044%281%29.jpg","alt_i":base+"IMG-20260715-WA0044.jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas."},
+      {"id":"obra_16","t":"Flor de Loto Rosada","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260715-WA0044.jpg","w":wa+"Flor%20de%20Loto%20Rosada"+disc,"h":"Detalle expresivo de una flor de loto floreciendo sobre aguas tranquilas."},
       {"id":"obra_17","t":"Rosas de Rosas","p_promo":"68.000 CLP","p_old":"100.000 CLP","i":base+"IMG-20260807-WA0020.jpg","w":wa+"Rosas%20de%20Rosas"+disc,"h":"Ramillete de rosas con pigmentos vivos y tiernos."}
     ];
 
@@ -999,7 +997,6 @@
       const o = obras[indexActual];
       const img = document.getElementById("current-art-img");
       img.src = o.i;
-      img.onerror = function(){ if(o.alt_i && this.src!==o.alt_i) this.src=o.alt_i; };
       document.getElementById("current-art-title").innerText = `Obra ${indexActual + 1} de 17: ${o.t}`;
       document.getElementById("current-art-speech").innerText = `"${o.h}"`;
       document.getElementById("current-art-price").innerText = `${o.p_promo} (Antes ${o.p_old})`;
@@ -1088,7 +1085,7 @@
       const c = document.createElement('div');
       c.className = 'obra-card';
       c.innerHTML = `
-        <div class="obra-img-box"><img src="${o.i}" alt="${o.t}" loading="lazy" onerror="if(o.alt_i&&this.src!==o.alt_i)this.src=o.alt_i;"></div>
+        <div class="obra-img-box"><img src="${o.i}" alt="${o.t}" loading="lazy"></div>
         <div class="obra-info">
           <div><h3>${o.t}</h3><p class="historia">${o.h}</p></div>
           <div>
